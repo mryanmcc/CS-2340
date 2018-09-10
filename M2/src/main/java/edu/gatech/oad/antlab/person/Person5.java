@@ -30,15 +30,8 @@ public class Person5 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-	  char[] p1;
-	  char[] p2;
-	  for (int a = 2; a < input.length(); a++) {
-		  p1[a-2] = input.charAt(a);
-	  }
-	  for (int a = 0; a < 2; a++) {
-	  	p2[a] = input.charAt(a);
-	  }
-	  return String(p1) + String(p2);
+	  String newStr = input.substring(2,input.length()) + input.substring(0,2);
+	  return newStr;
 	}
 	
 	/**
