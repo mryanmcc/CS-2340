@@ -1,4 +1,4 @@
-package TEAM79b.m4;
+package TEAM79b.m4.controller;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -32,6 +32,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import TEAM79b.m4.R;
+import TEAM79b.m4.model.Login;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -351,7 +354,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
 
         public void login(View view) {
-            if (mEmailView.getText().toString().equals("test@gatech.edu") && mPasswordView.getText().toString().equals("test")) {
+            Login model = Login.getInstance();
+            if (model.getUserAccounts().containsKey(mEmailView.getText().toString()) && model.getUserAccounts().get(mEmailView.getText().toString()).equals(mPasswordView.getText().toString())) {
                 Log.d("test","Login added");
                 //insert code to switch screens
             }

@@ -15,6 +15,11 @@ public class Login {
     private Login() {
         userAccounts = new HashMap<>();
     }
+
+    public Map<String, String> getUserAccounts() {
+        return userAccounts;
+    }
+
     public void addUser(String email, String pass) {
         userAccounts.put(email, pass);
         totalUsers++;
