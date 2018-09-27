@@ -353,7 +353,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
         }
 
-        public void login(View view) {
+        public void loginPressed(View view) {
             Login model = Login.getInstance();
             if (model.getUserAccounts().containsKey(mEmailView.getText().toString()) && model.getUserAccounts().get(mEmailView.getText().toString()).equals(mPasswordView.getText().toString())) {
                 Log.d("test","Login added");
