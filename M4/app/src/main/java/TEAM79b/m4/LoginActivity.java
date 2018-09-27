@@ -23,6 +23,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -38,6 +39,9 @@ import static android.Manifest.permission.READ_CONTACTS;
  * A login screen that offers login via email/password.
  */
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
+
+    private static final String userEmail = "testEmail";
+    private static final String userPass = "testPass";
 
     /**
      * Id to identity READ_CONTACTS permission request.
@@ -344,6 +348,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         protected void onCancelled() {
             mAuthTask = null;
             showProgress(false);
+        }
+
+        public void login(View view) {
+            if (mEmailView.getText().toString().equals("test@gatech.edu") && mPasswordView.getText().toString().equals("test")) {
+                Log.d("test","Login added");
+                //insert code to switch screens
+            }
         }
     }
 }
