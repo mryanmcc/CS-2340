@@ -34,5 +34,5 @@
         android:layout_below="@id/logInPass"
         android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"
-        android:text="Button" />
+        android:text="Login" />
 </RelativeLayout>
