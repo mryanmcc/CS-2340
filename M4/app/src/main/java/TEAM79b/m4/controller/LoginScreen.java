@@ -25,7 +25,7 @@ public class LoginScreen extends AppCompatActivity {
         loginPass = (EditText) findViewById(R.id.loginPass);
         loginSubmit = (Button) findViewById(R.id.loginSubmit);
 
-//        goToApp();
+        goToWelcome();
     }
 
     public void loginPress(View view) {
@@ -36,12 +36,14 @@ public class LoginScreen extends AppCompatActivity {
             startActivity(new Intent(LoginScreen.this, LoginScreen.class));
         }
     }
-//    private void goToApp() {
-//        loginSubmit.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(LoginScreen.this, AppScreen.class));
-//            }
-//        });
-//    }
+
+    private void goToWelcome() {
+        Button loginBack = (Button) findViewById(R.id.loginBack);
+        loginBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginScreen.this, WelcomeScreen.class));
+            }
+        });
+    }
 }

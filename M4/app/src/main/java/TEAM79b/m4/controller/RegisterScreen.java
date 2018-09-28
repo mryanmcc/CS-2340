@@ -25,17 +25,18 @@ public class RegisterScreen extends AppCompatActivity {
         regPass = (EditText) findViewById(R.id.regPass);
         regSubmit = (Button) findViewById(R.id.regSubmit);
 
-        //goToApp();
+        goToWelcome();
     }
 
-//    private void goToApp() {
-//        regSubmit.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(RegisterScreen.this, AppScreen.class));
-//            }
-//        });
-//    }
+    private void goToWelcome() {
+        Button regBack = (Button) findViewById(R.id.regBack);
+        regBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(RegisterScreen.this, WelcomeScreen.class));
+            }
+        });
+    }
 
     public void regPress(View view) {
         Login model = Login.getInstance();
