@@ -7,18 +7,18 @@
     tools:context=".controller.LoginScreen">
 
     <EditText
-        android:id="@+id/logInEmail"
+        android:id="@+id/loginEmail"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_above="@id/loginPass"
         android:layout_centerHorizontal="true"
-        android:layout_above="@id/logInPass"
         android:layout_marginBottom="30dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Email" />
 
     <EditText
-        android:id="@+id/logInPass"
+        android:id="@+id/loginPass"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -28,11 +28,12 @@
         android:text="Password" />
 
     <Button
-        android:id="@+id/logInSubmit"
+        android:id="@+id/loginSubmit"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logInPass"
-        android:layout_marginTop="30dp"
+        android:layout_below="@id/loginPass"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:onClick="loginPress"
         android:text="Login" />
 </RelativeLayout>
