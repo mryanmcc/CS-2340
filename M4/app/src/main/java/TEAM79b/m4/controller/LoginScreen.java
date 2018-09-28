@@ -33,7 +33,7 @@ public class LoginScreen extends AppCompatActivity {
         if (model.getUserAccounts().containsKey(loginEmail.getText().toString()) && model.getUserAccounts().get(loginEmail.getText().toString()).equals(loginPass.getText().toString())) {
             startActivity(new Intent(LoginScreen.this, AppScreen.class));
         } else {
-            startActivity(new Intent(LoginScreen.this, LoginScreen.class));
+            startActivity(new Intent(LoginScreen.this, BadIdScreen.class));
         }
     }
 
