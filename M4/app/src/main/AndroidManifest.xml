@@ -24,7 +24,9 @@
         <activity android:name=".controller.RegisterScreen" />
         <activity android:name=".controller.LoginScreen" />
         <activity android:name=".controller.AppScreen" />
-        <activity android:name=".controller.BadIdScreen"></activity>
+        <activity android:name=".controller.BadIdScreen"
+            android:theme="@style/AppTheme.PopUp"
+        ></activity>
     </application>
 
 </manifest>
