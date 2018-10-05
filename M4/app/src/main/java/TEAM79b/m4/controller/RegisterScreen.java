@@ -53,9 +53,9 @@ public class RegisterScreen extends AppCompatActivity {
     public void regPress(View view) {
         Login model = Login.getInstance();
         model.addUser(regEmail.getText().toString(), regPass.getText().toString());
-        user.setEmail(regEmail.getText().toString());
-        user.setPassword(regPass.getText().toString());
-        user.setUserType((String) roleSpinner.getSelectedItem());
+//        user.setEmail(regEmail.getText().toString());
+//        user.setPassword(regPass.getText().toString());
+//        user.setUserType((String) roleSpinner.getSelectedItem());
         startActivity(new Intent(RegisterScreen.this, AppScreen.class));
     }
 }
