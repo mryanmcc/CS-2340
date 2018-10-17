@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.InputStream;
+
 import TEAM79b.m4.R;
+import TEAM79b.m4.model.Location;
 
 public class WelcomeScreen extends AppCompatActivity {
 
@@ -17,6 +20,12 @@ public class WelcomeScreen extends AppCompatActivity {
 
         goToLogin();
         goToRegister();
+
+        Location model = Location.getInstance();
+
+//        try {
+//            InputStream is = getResources().openRawResource()
+//        }
     }
 
     private void goToLogin() {
@@ -38,4 +47,6 @@ public class WelcomeScreen extends AppCompatActivity {
             }
         });
     }
+
+
 }
