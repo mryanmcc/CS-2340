@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,10 +20,19 @@ import TEAM79b.m4.model.Location;
 
 public class AppScreen extends AppCompatActivity {
 
+    private static final String TAG = "MY_APP";
+
+    private Button loadLocations;
+    private TextView locationData;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app_screen);
+
+        loadLocations = (Button) findViewById(R.id.loadLocButton);
+        locationData = (TextView) findViewById(R.id.locationData);
+
 
         goToWelcome();
     }
@@ -46,14 +57,15 @@ public class AppScreen extends AppCompatActivity {
             String line;
             locationStreamBuffer.readLine(); //get rid of header line
             while ((line = locationStreamBuffer.readLine()) != null) {
-                Log.d("LoginScreen", line);
+                Log.d(AppScreen.TAG, line);
                 String[] tokens = line.split(",");
                 int id = Integer.parseInt(tokens[1]);
+                locationData.setText(id);
                 //model.addUser(new String(tokens[NAME_POSITION], tokens[2], id, tokens[3]));
             }
             locationStreamBuffer.close();
         } catch (IOException e) {
-           // Log.e(MainActivity.TAG, "error reading assets", e);
+           Log.e(AppScreen.TAG, "error reading assets", e);
         }
     }
 }
