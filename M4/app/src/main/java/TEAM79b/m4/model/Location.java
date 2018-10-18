@@ -2,10 +2,11 @@ package TEAM79b.m4.model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Location {
-    private Map<String, ArrayList> locationMap;
+    private Map<String, List<String>> locationMap;
 
     private static final Location _instance = new Location();
     public static Location getInstance() {
@@ -16,7 +17,7 @@ public class Location {
         locationMap = new HashMap<>();
     }
 
-    public void addUser(String location, ArrayList data) {
+    public void addUser(String location, List<String> data) {
         locationMap.put(location, data);
     }
 }
