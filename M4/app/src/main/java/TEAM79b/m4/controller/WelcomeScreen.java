@@ -25,25 +25,6 @@ public class WelcomeScreen extends AppCompatActivity {
 
         goToLogin();
         goToRegister();
-
-        Location model = Location.getInstance();
-
-//        try {
-//            InputStream locationStream = getResources().openRawResource(R.raw.locationdata);
-//            BufferedReader locationStreamBuffer = new BufferedReader(new InputStreamReader(locationStream, StandardCharsets.UTF_8));
-//
-//            String line;
-//            locationStreamBuffer.readLine(); //get rid of header line
-//            while ((line = locationStreamBuffer.readLine()) != null) {
-//                Log.d("LoginScreen", line);
-//                String[] tokens = line.split(",");
-//                int id = Integer.parseInt(tokens[1]);
-//                //model.addUser(new String(tokens[NAME_POSITION], tokens[2], id, tokens[3]));
-//            }
-//            locationStreamBuffer.close();
-//        } catch (IOException e) {
-//           // Log.e(MainActivity.TAG, "error reading assets", e);
-//        }
     }
 
     private void goToLogin() {
