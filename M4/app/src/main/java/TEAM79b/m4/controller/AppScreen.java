@@ -60,7 +60,7 @@ public class AppScreen extends AppCompatActivity {
                 Log.d(AppScreen.TAG, line);
                 String[] tokens = line.split(",");
                 int id = Integer.parseInt(tokens[1]);
-                locationData.setText(id);
+//                locationData.setText(id);
                 //model.addUser(new String(tokens[NAME_POSITION], tokens[2], id, tokens[3]));
             }
             locationStreamBuffer.close();
