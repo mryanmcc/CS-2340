@@ -19,28 +19,33 @@
         android:id="@+id/appText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/goWelcome"
+        android:layout_above="@id/button1"
         android:layout_marginBottom="30dp"
         android:layout_centerHorizontal="true"
         android:text="Team 79B" />
 
     <Button
-        android:id="@+id/goWelcome"
+        android:id="@+id/button1"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
         android:layout_centerVertical="true"
-        android:text="Go Back" />
+        android:text="button1" />
 
     <Button
+<<<<<<< HEAD
         android:id="@+id/loadLocButton"
         android:layout_width="wrap_content"
+=======
+        android:id="@+id/goWelcome"
+        android:layout_width="300dp"
+>>>>>>> 31e24ec70d0ed3934311c3224e6332e8bb1e50f8
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="153dp"
-        android:onClick="loadLocations"
-        android:text="Button" />
+        android:layout_below="@id/button1"
+        android:text="Go Back" />
+    
 
     <TextView
         android:id="@+id/locationData"
