@@ -19,17 +19,26 @@
         android:id="@+id/appText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/goWelcome"
+        android:layout_above="@id/button1"
         android:layout_marginBottom="30dp"
         android:layout_centerHorizontal="true"
         android:text="Team 79B" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:layout_centerVertical="true"
+        android:text="button1" />
 
     <Button
         android:id="@+id/goWelcome"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_below="@id/button1"
         android:text="Go Back" />
 
     <Button
