@@ -20,7 +20,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import TEAM79b.m4.R;
-import TEAM79b.m4.model.Location;
+import TEAM79b.m4.model.LocationContainer;
 
 public class AppScreen extends AppCompatActivity {
 
@@ -50,7 +50,7 @@ public class AppScreen extends AppCompatActivity {
     }
 
     public void loadLocations(View view) {
-        Location model = Location.getInstance();
+        LocationContainer model = LocationContainer.getInstance();
 
         try {
             InputStream locationStream = getResources().openRawResource(R.raw.locationdata);

@@ -5,16 +5,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Location {
+public class LocationContainer {
     private HashMap<String, List<String>> locationMap;
 
-    private static final Location _instance = new Location();
-    public static Location getInstance() { return _instance; }
+    private static final LocationContainer _instance = new LocationContainer();
+    public static LocationContainer getInstance() { return _instance; }
     public static HashMap<String, List<String>> getLocationMap() {
         return _instance.locationMap;
     }
 
-    private Location() {
+    private LocationContainer() {
         locationMap = new HashMap<>();
     }
 

@@ -14,7 +14,7 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
 import TEAM79b.m4.R;
-import TEAM79b.m4.model.Location;
+import TEAM79b.m4.model.LocationContainer;
 
 public class WelcomeScreen extends AppCompatActivity {
 

@@ -13,14 +13,14 @@ import java.util.List;
 import java.util.Set;
 
 import TEAM79b.m4.R;
-import TEAM79b.m4.model.Location;
+import TEAM79b.m4.model.LocationContainer;
 
 
 public class locList extends AppCompatActivity {
 
     private ListView listView;
     private ArrayAdapter adapter;
-    private HashMap model = Location.getLocationMap();
+    private HashMap model = LocationContainer.getLocationMap();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

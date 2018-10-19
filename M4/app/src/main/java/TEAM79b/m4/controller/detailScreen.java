@@ -11,11 +11,11 @@ import java.util.HashMap;
 import java.util.List;
 
 import TEAM79b.m4.R;
-import TEAM79b.m4.model.Location;
+import TEAM79b.m4.model.LocationContainer;
 
 public class detailScreen extends AppCompatActivity {
 
-    private HashMap model = Location.getLocationMap();
+    private HashMap model = LocationContainer.getLocationMap();
     private List<String> values;
 
     @Override
