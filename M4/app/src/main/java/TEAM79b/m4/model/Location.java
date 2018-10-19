@@ -20,4 +20,8 @@ public class Location {
     public void addUser(String location, List<String> data) {
         locationMap.put(location, data);
     }
+
+    public Map<String, List<String>> locationMap() {
+        return locationMap;
+    }
 }
