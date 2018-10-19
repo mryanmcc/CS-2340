@@ -20,14 +20,14 @@ public class locList extends AppCompatActivity {
 
     private ListView listView;
     private ArrayAdapter adapter;
-    private HashMap model = LocationContainer.getLocationMap();
+    private HashMap locationKeys = LocationContainer.getLocationMap();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loc_list);
 
-        Set<String> keys = model.keySet();
+        Set<String> keys = locationKeys.keySet();
         final String[] keyList = keys.toArray(new String[keys.size()]);
         listView = (ListView) findViewById(R.id.locListView);
         adapter = new ArrayAdapter(locList.this, android.R.layout.simple_list_item_1, keyList);

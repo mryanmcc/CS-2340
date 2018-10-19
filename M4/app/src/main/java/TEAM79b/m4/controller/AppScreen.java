@@ -63,7 +63,7 @@ public class AppScreen extends AppCompatActivity {
                 String[] tokens = line.split(",");
                 //int id = Integer.parseInt(tokens[0]);
                 List<String> locationDataTemp = Arrays.asList(tokens[2], tokens[3], tokens[4], tokens[5], tokens[6], tokens[7], tokens[8], tokens[9], tokens[10]);
-                model.addUser(tokens[1], locationDataTemp);
+                model.addLocation(tokens[1], locationDataTemp);
                 startActivity(new Intent(AppScreen.this, locList.class));
                 //model.addUser(new String(tokens[NAME_POSITION], tokens[2], id, tokens[3]));
             }

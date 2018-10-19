@@ -18,7 +18,7 @@ public class LocationContainer {
         locationMap = new HashMap<>();
     }
 
-    public void addUser(String location, List<String> data) {
+    public void addLocation(String location, List<String> data) {
         locationMap.put(location, data);
     }
 
