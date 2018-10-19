@@ -24,9 +24,10 @@
         <activity android:name=".controller.RegisterScreen" />
         <activity android:name=".controller.LoginScreen" />
         <activity android:name=".controller.AppScreen" />
-        <activity android:name=".controller.BadIdScreen"
-            android:theme="@style/AppTheme.PopUp"
-        ></activity>
+        <activity
+            android:name=".controller.BadIdScreen"
+            android:theme="@style/AppTheme.PopUp" />
+        <activity android:name=".controller.locList"></activity>
     </application>
 
 </manifest>

@@ -4,22 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".controller.WelcomeScreen">
+    tools:context=".controller.locList">
+
+    <ListView
+        android:id="@+id/locListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@id/backToApp"
+        android:layout_marginBottom="45dp"/>
 
     <Button
-        android:id="@+id/goLogin"
+        android:id="@+id/backToApp"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_above="@id/goRegister"
-        android:layout_marginBottom="30dp"
-        android:text="Login" />
+        android:layout_alignParentBottom="true"
+        android:text="Go Back" />
 
-    <Button
-        android:id="@+id/goRegister"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Register" />
+
+
 </RelativeLayout>

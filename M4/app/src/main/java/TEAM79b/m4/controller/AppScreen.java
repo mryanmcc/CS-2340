@@ -22,6 +22,8 @@ import java.util.List;
 import TEAM79b.m4.R;
 import TEAM79b.m4.model.Location;
 
+import static TEAM79b.m4.controller.WelcomeScreen.tokens;
+
 public class AppScreen extends AppCompatActivity {
 
     private static final String TAG = "MY_APP";
@@ -62,11 +64,12 @@ public class AppScreen extends AppCompatActivity {
             locationStreamBuffer.readLine(); //get rid of header line
             while ((line = locationStreamBuffer.readLine()) != null) {
                 Log.d(AppScreen.TAG, line);
-                String[] tokens = line.split(",");
+                tokens = line.split(",");
                 //int id = Integer.parseInt(tokens[0]);
                 List<String> locationDataTemp = Arrays.asList(tokens[2], tokens[3], tokens[4], tokens[5], tokens[6], tokens[7], tokens[8], tokens[9], tokens[10]);
                 model.addUser(tokens[1], locationDataTemp);
-                locationData.setText(tokens[1].toString());
+                startActivity(new Intent(AppScreen.this, locList.class));
+                //locationData.setText(tokens[1].toString());
                 //model.addUser(new String(tokens[NAME_POSITION], tokens[2], id, tokens[3]));
             }
             locationStreamBuffer.close();
