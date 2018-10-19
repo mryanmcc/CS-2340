@@ -19,19 +19,10 @@
         android:id="@+id/appText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/locationData"
-        android:layout_marginBottom="10dp"
+        android:layout_above="@id/loadLocButton"
+        android:layout_marginBottom="30dp"
         android:layout_centerHorizontal="true"
         android:text="Team 79B" />
-
-    <TextView
-        android:id="@+id/locationData"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/loadLocButton"
-        android:layout_marginBottom="10dp"
-        android:layout_centerHorizontal="true"
-        android:text="Location Data" />
 
     <Button
         android:id="@+id/loadLocButton"
@@ -41,7 +32,7 @@
         android:layout_centerVertical="true"
         android:layout_marginBottom="15dp"
         android:onClick="loadLocations"
-        android:text="Load Location" />
+        android:text="Load Locations" />
 
     <Button
         android:id="@+id/goWelcome"
