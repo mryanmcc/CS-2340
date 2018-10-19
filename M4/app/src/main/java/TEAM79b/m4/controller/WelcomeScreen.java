@@ -18,9 +18,6 @@ import TEAM79b.m4.model.Location;
 
 public class WelcomeScreen extends AppCompatActivity {
 
-
-    public static String[] tokens;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

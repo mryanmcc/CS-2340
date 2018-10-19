@@ -6,11 +6,12 @@ import java.util.List;
 import java.util.Map;
 
 public class Location {
-    private Map<String, List<String>> locationMap;
+    private HashMap<String, List<String>> locationMap;
 
     private static final Location _instance = new Location();
-    public static Location getInstance() {
-        return _instance;
+    public static Location getInstance() { return _instance; }
+    public static HashMap<String, List<String>> getLocationMap() {
+        return _instance.locationMap;
     }
 
     private Location() {
@@ -21,7 +22,6 @@ public class Location {
         locationMap.put(location, data);
     }
 
-    public Map<String, List<String>> locationMap() {
-        return locationMap;
-    }
+    //the method you made for getting the map
+//    public Map<String, List<String>> locationMap() { return locationMap; }
 }
