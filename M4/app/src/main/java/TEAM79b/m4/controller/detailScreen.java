@@ -52,7 +52,7 @@ public class detailScreen extends AppCompatActivity {
         backToList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(detailScreen.this, locList.class));
+                startActivity(new Intent(detailScreen.this, LocationList.class));
             }
         });
     }

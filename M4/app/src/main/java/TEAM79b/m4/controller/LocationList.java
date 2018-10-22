@@ -16,7 +16,7 @@ import TEAM79b.m4.R;
 import TEAM79b.m4.model.LocationContainer;
 
 
-public class locList extends AppCompatActivity {
+public class LocationList extends AppCompatActivity {
 
     private ListView listView;
     private ArrayAdapter adapter;
@@ -30,13 +30,13 @@ public class locList extends AppCompatActivity {
         Set<String> keys = locationKeys.keySet();
         final String[] keyList = keys.toArray(new String[keys.size()]);
         listView = (ListView) findViewById(R.id.locListView);
-        adapter = new ArrayAdapter(locList.this, android.R.layout.simple_list_item_1, keyList);
+        adapter = new ArrayAdapter(LocationList.this, android.R.layout.simple_list_item_1, keyList);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String temp = keyList[position];
-                Intent intent = new Intent(locList.this, detailScreen.class);
+                Intent intent = new Intent(LocationList.this, detailScreen.class);
                 intent.putExtra("key", temp);
                 startActivity(intent);
             }
@@ -50,7 +50,7 @@ public class locList extends AppCompatActivity {
         backToApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(locList.this, AppScreen.class));
+                startActivity(new Intent(LocationList.this, AppScreen.class));
             }
         });
     }
