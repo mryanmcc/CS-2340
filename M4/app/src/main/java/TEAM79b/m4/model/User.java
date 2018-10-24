@@ -6,10 +6,20 @@ import java.util.List;
 public class User {
     private String email;
     private String password;
-    private String userType;
+    private UserTypes role;
 
     public static List<String> rolesList = Arrays.asList("Need User", "Donating User", "Location Employee", "Manager", "Admin", "Delivery Driver");
 
+    // No-arg constructor to make firebase happy :)
+    public User() {
+
+    }
+
+    public User(String email, String password, UserTypes role) {
+        this.email = email;
+        this.password = password;
+        this.role = role;
+    }
     public void setEmail(String email) {
         this.email = email;
     }
@@ -18,8 +28,8 @@ public class User {
         this.password = password;
     }
 
-    public void setUserType(String userType) {
-        this.userType = userType;
+    public void setUserType(UserTypes role) {
+        this.role = role;
     }
 
     public String getUsername() {
@@ -30,7 +40,7 @@ public class User {
         return password;
     }
 
-    public String getUserType() {
-        return userType;
+    public UserTypes getUserType() {
+        return role;
     }
 }
