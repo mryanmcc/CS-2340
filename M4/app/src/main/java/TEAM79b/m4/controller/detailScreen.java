@@ -7,13 +7,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 
 import TEAM79b.m4.R;
+import TEAM79b.m4.model.Location;
 import TEAM79b.m4.model.LocationContainer;
 
-public class detailScreen extends AppCompatActivity {
+public class detailScreen extends AppCompatActivity implements Serializable {
 
     private HashMap model = LocationContainer.getLocationMap();
     private List<String> values;
@@ -25,24 +27,26 @@ public class detailScreen extends AppCompatActivity {
 
         Intent intent = getIntent();
         String key = intent.getStringExtra("key");
-        values = (List<String>) model.get(key);
+        //values = (List<String>) model.get(key);
+
+        Location location = (Location) getIntent().getSerializableExtra("locationObj");
 
         TextView detailName = (TextView) findViewById(R.id.detailName);
         detailName.setText(key);
         TextView detailLat = (TextView) findViewById(R.id.detailLat);
-        detailLat.setText("Latitude: " + values.get(0));
+        detailLat.setText("Latitude: " + location.getLatitude());
         TextView detailLon = (TextView) findViewById(R.id.detailLon);
-        detailLon.setText("Longitude: " + values.get(1));
+        detailLon.setText("Longitude: " + location.getLongitude());
         TextView detailAdd1 = (TextView) findViewById(R.id.detailAdd1);
-        detailAdd1.setText(values.get(2));
+        detailAdd1.setText(location.getAddress1());
         TextView detailAdd2 = (TextView) findViewById(R.id.detailAdd2);
-        detailAdd2.setText(values.get(3) + ", " + values.get(4) + " " + values.get(5));
+        detailAdd2.setText(location.getCity() + ", " + location.getState() + " " + location.getZip());
         TextView detailType = (TextView) findViewById(R.id.detailType);
-        detailType.setText(values.get(6));
+        detailType.setText(location.getType());
         TextView detailPhone = (TextView) findViewById(R.id.detailPhone);
-        detailPhone.setText(values.get(7));
+        detailPhone.setText(location.getPhoneNum());
         TextView detailWeb = (TextView) findViewById(R.id.detailWeb);
-        detailWeb.setText(values.get(8));
+        detailWeb.setText(location.getUrl());
 
         goToList();
     }

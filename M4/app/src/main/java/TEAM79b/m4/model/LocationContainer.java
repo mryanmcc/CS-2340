@@ -6,11 +6,11 @@ import java.util.List;
 import java.util.Map;
 
 public class LocationContainer {
-    private HashMap<String, List<String>> locationMap;
+    private HashMap<Location, List<Item>> locationMap;
 
     private static final LocationContainer _instance = new LocationContainer();
     public static LocationContainer getInstance() { return _instance; }
-    public static HashMap<String, List<String>> getLocationMap() {
+    public static HashMap<Location, List<Item>> getLocationMap() {
         return _instance.locationMap;
     }
 
@@ -18,7 +18,7 @@ public class LocationContainer {
         locationMap = new HashMap<>();
     }
 
-    public void addLocation(String location, List<String> data) {
+    public void addLocation(Location location, List<Item> data) {
         locationMap.put(location, data);
     }
 

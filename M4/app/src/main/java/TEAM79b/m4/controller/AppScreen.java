@@ -20,6 +20,8 @@ import java.util.Arrays;
 import java.util.List;
 
 import TEAM79b.m4.R;
+import TEAM79b.m4.model.Item;
+import TEAM79b.m4.model.Location;
 import TEAM79b.m4.model.LocationContainer;
 
 public class AppScreen extends AppCompatActivity {
@@ -62,8 +64,10 @@ public class AppScreen extends AppCompatActivity {
                 Log.d(AppScreen.TAG, line);
                 String[] tokens = line.split(",");
                 //int id = Integer.parseInt(tokens[0]);
-                List<String> locationDataTemp = Arrays.asList(tokens[2], tokens[3], tokens[4], tokens[5], tokens[6], tokens[7], tokens[8], tokens[9], tokens[10]);
-                model.addLocation(tokens[1], locationDataTemp);
+                //List<String> locationDataTemp = Arrays.asList(tokens[2], tokens[3], tokens[4], tokens[5], tokens[6], tokens[7], tokens[8], tokens[9], tokens[10]);
+                Location keyEntry = new Location(tokens[1], Float.parseFloat(tokens[2]), Float.parseFloat(tokens[3]), tokens[4], tokens[5], tokens[6], Integer.parseInt(tokens[7]), tokens[8], tokens[9], tokens[10]);
+                List<Item> valueEntry = new ArrayList<>();
+                model.addLocation(keyEntry, valueEntry);
                 startActivity(new Intent(AppScreen.this, LocationList.class));
                 //model.addUser(new String(tokens[NAME_POSITION], tokens[2], id, tokens[3]));
             }
