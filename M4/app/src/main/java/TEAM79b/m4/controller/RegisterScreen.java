@@ -77,6 +77,7 @@ public class RegisterScreen extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             //Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = firebaseAuth.getCurrentUser();
+                            //user.updateProfile()
                             //User user = User
                                     //pass through from screen to screen
                             startActivity(new Intent(RegisterScreen.this, LoginScreen.class));
