@@ -29,7 +29,10 @@
             android:name=".controller.BadIdScreen"
             android:theme="@style/AppTheme.PopUp" />
         <activity android:name=".controller.LocationList" />
-        <activity android:name=".controller.detailScreen"></activity>
+        <activity android:name=".controller.detailScreen" />
+        <activity android:name=".controller.ItemEntryScreen" />
+        <activity android:name=".controller.ItemListScreen" />
+        <activity android:name=".controller.ItemDetailScreen"></activity>
     </application>
 
 </manifest>

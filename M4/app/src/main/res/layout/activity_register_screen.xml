@@ -14,8 +14,8 @@
         android:layout_above="@id/roleText"
         android:layout_marginBottom="15dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Email" />
+        android:inputType="textEmailAddress"
+        android:hint="Email" />
 
     <TextView
         android:id="@+id/roleText"
@@ -42,7 +42,7 @@
         android:layout_marginBottom="15dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Password" />
+        android:hint="Password" />
 
     <EditText
         android:id="@+id/regPassRepeat"
@@ -52,7 +52,7 @@
         android:layout_centerInParent="true"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Repeat Password" />
+        android:hint="Repeat Password" />
 
     <Button
         android:id="@+id/regSubmit"

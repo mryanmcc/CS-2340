@@ -49,6 +49,7 @@ public class detailScreen extends AppCompatActivity implements Serializable {
         detailWeb.setText(location.getUrl());
 
         goToList();
+        goToItemList();
     }
 
     private void goToList() {
@@ -57,6 +58,19 @@ public class detailScreen extends AppCompatActivity implements Serializable {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(detailScreen.this, LocationList.class));
+            }
+        });
+    }
+
+    private void goToItemList() {
+        final Location location = (Location) getIntent().getSerializableExtra("locationObj");
+        Button goItemList = (Button) findViewById(R.id.goItemList);
+        goItemList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(detailScreen.this, ItemListScreen.class);
+                intent.putExtra("locationObj", (Serializable) location);
+                startActivity(intent);
             }
         });
     }

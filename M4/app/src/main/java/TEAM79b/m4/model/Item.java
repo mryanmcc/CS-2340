@@ -8,6 +8,15 @@ public class Item {
     private float value;
     private String category;
 
+    public Item(String timeStamp, Location location, String shortDesc, String longDesc, float value, String category ) {
+        this.timeStamp = timeStamp;
+        this.location = location;
+        this.shortDesc = shortDesc;
+        this.longDesc = longDesc;
+        this.value = value;
+        this.category = category;
+    }
+
     public String getTimeStamp() {
         return timeStamp;
     }
