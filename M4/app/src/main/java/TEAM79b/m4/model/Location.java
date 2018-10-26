@@ -106,4 +106,20 @@ public class Location implements Serializable {
     public void setUrl(String url) {
         this.url = url;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        final Location other = (Location) obj;
+        if (this.name.equals(other.name)) {
+            return true;
+        }
+        return false;
+    }
+
+    public int hashcode() {
+        return name.length();
+    }
 }

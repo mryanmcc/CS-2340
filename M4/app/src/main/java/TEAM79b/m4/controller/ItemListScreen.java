@@ -18,11 +18,12 @@ import TEAM79b.m4.model.Item;
 import TEAM79b.m4.model.Location;
 import TEAM79b.m4.model.LocationContainer;
 
-public class ItemListScreen extends AppCompatActivity {
+public class ItemListScreen extends AppCompatActivity implements Serializable {
 
     private ListView listView;
     private ArrayAdapter adapter;
-    private HashMap<Location, List<Item>> locMap = LocationContainer.getLocationMap();
+    private LocationContainer locContainer = LocationContainer.getInstance();
+    private HashMap<Location, List<Item>> locMap = locContainer.getLocationMap();
     private List<Item> values;
 
     @Override
@@ -31,7 +32,8 @@ public class ItemListScreen extends AppCompatActivity {
         setContentView(R.layout.activity_item_list_screen);
 
         Location location = (Location) getIntent().getSerializableExtra("LocationObj");
-        values = (List<Item>) locMap.get(location);
+        location.getZip();
+        values = locMap.get(location);
         final String[] itemValues = new String[values.size()];
         for (int i = 0; i < values.size(); i++) {
             itemValues[i] = values.get(i).getShortDesc();
@@ -62,7 +64,7 @@ public class ItemListScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ItemListScreen.this, ItemEntryScreen.class);
-                intent.putExtra("locationObj", (Serializable) location);
+                intent.putExtra("locationObj", location);
                 startActivity(intent);
             }
         });

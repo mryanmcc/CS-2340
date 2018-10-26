@@ -12,13 +12,17 @@ import java.util.HashMap;
 import java.util.List;
 
 import TEAM79b.m4.R;
+import TEAM79b.m4.model.Item;
 import TEAM79b.m4.model.Location;
 import TEAM79b.m4.model.LocationContainer;
 
 public class detailScreen extends AppCompatActivity implements Serializable {
 
-    private HashMap model = LocationContainer.getLocationMap();
+    private LocationContainer locContainer = LocationContainer.getInstance();
+    private HashMap<Location, List<Item>> model = locContainer.getLocationMap();
     private List<String> values;
+
+    //private Location locationMain = (Location) getIntent().getSerializableExtra("locationObj");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +73,7 @@ public class detailScreen extends AppCompatActivity implements Serializable {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(detailScreen.this, ItemListScreen.class);
-                intent.putExtra("locationObj", (Serializable) location);
+                intent.putExtra("LocationObj", location);
                 startActivity(intent);
             }
         });

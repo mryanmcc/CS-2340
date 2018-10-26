@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Set;
 
 import TEAM79b.m4.R;
+import TEAM79b.m4.model.Item;
 import TEAM79b.m4.model.Location;
 import TEAM79b.m4.model.LocationContainer;
 
@@ -23,7 +24,8 @@ public class LocationList extends AppCompatActivity {
 
     private ListView listView;
     private ArrayAdapter adapter;
-    private HashMap locationKeys = LocationContainer.getLocationMap();
+    private LocationContainer locContainer = LocationContainer.getInstance();
+    private HashMap<Location, List<Item>> locationKeys = locContainer.getLocationMap();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

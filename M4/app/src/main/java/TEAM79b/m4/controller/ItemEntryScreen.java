@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
@@ -19,7 +20,7 @@ import TEAM79b.m4.model.Location;
 import TEAM79b.m4.model.LocationContainer;
 import TEAM79b.m4.model.User;
 
-public class ItemEntryScreen extends AppCompatActivity {
+public class ItemEntryScreen extends AppCompatActivity implements Serializable {
 
     private EditText itemSDesc;
     private EditText itemLDesc;
@@ -43,7 +44,8 @@ public class ItemEntryScreen extends AppCompatActivity {
     }
 
     public void addNewItem(View view) {
-        HashMap<Location, List<Item>> locations = LocationContainer.getLocationMap();
+        LocationContainer locContainer = LocationContainer.getInstance();
+        HashMap<Location, List<Item>> locations = locContainer.getLocationMap();
         Location location = (Location) getIntent().getSerializableExtra("LocationObj");
         Item item = new Item(itemTime.getText().toString(), location, itemSDesc.getText().toString()
                 , itemLDesc.getText().toString(), Float.parseFloat(itemVal.getText().toString()), itemCat.getText().toString());

@@ -10,8 +10,8 @@ public class LocationContainer {
 
     private static final LocationContainer _instance = new LocationContainer();
     public static LocationContainer getInstance() { return _instance; }
-    public static HashMap<Location, List<Item>> getLocationMap() {
-        return _instance.locationMap;
+    public HashMap<Location, List<Item>> getLocationMap() {
+        return locationMap;
     }
 
     private LocationContainer() {
