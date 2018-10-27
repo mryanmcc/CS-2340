@@ -45,11 +45,11 @@ public class ItemEntryScreen extends AppCompatActivity implements Serializable {
 
     public void addNewItem(View view) {
         LocationContainer locContainer = LocationContainer.getInstance();
-        HashMap<Location, List<Item>> locations = locContainer.getLocationMap();
+        //HashMap<Location, List<Item>> locations = locContainer.getLocationMap();
         Location location = (Location) getIntent().getSerializableExtra("locationObj");
         Item item = new Item(itemTime.getText().toString(), location, itemSDesc.getText().toString()
                 , itemLDesc.getText().toString(), Float.parseFloat(itemVal.getText().toString()), itemCat.getText().toString());
-        locations.get(location).add(item);
+        locContainer.getLocationMap().get(location).add(item);
         Intent intent = new Intent(ItemEntryScreen.this, ItemListScreen.class);
         intent.putExtra("LocationObj", location);
         startActivity(intent);
