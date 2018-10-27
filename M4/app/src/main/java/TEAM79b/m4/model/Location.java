@@ -15,7 +15,6 @@ public class Location implements Serializable {
     private String type;
     private String phoneNum;
     private String url;
-    //private List<Item> itemList;
 
     public Location(String name, float latitude, float longitude, String address1, String city, String state, int zip, String type, String phoneNum, String url) {
         this.name = name;
@@ -109,14 +108,6 @@ public class Location implements Serializable {
     public void setUrl(String url) {
         this.url = url;
     }
-
-//    public List<Item> getItemList() {
-//        return itemList;
-//    }
-//
-//    public void setItemList(List<Item> itemList) {
-//        this.itemList = itemList;
-//    }
 
     @Override
     public boolean equals(Object o) {
