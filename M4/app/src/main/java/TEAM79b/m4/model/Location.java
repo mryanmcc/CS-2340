@@ -1,6 +1,8 @@
 package TEAM79b.m4.model;
 
 import java.io.Serializable;
+import java.util.List;
+import java.util.Objects;
 
 public class Location implements Serializable {
     private String name;
@@ -13,6 +15,7 @@ public class Location implements Serializable {
     private String type;
     private String phoneNum;
     private String url;
+    //private List<Item> itemList;
 
     public Location(String name, float latitude, float longitude, String address1, String city, String state, int zip, String type, String phoneNum, String url) {
         this.name = name;
@@ -107,19 +110,34 @@ public class Location implements Serializable {
         this.url = url;
     }
 
+//    public List<Item> getItemList() {
+//        return itemList;
+//    }
+//
+//    public void setItemList(List<Item> itemList) {
+//        this.itemList = itemList;
+//    }
+
     @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        final Location other = (Location) obj;
-        if (this.name.equals(other.name)) {
-            return true;
-        }
-        return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Location location = (Location) o;
+        return Float.compare(location.latitude, latitude) == 0 &&
+                Float.compare(location.longitude, longitude) == 0 &&
+                zip == location.zip &&
+                Objects.equals(name, location.name) &&
+                Objects.equals(address1, location.address1) &&
+                Objects.equals(city, location.city) &&
+                Objects.equals(state, location.state) &&
+                Objects.equals(type, location.type) &&
+                Objects.equals(phoneNum, location.phoneNum) &&
+                Objects.equals(url, location.url);
     }
 
-    public int hashcode() {
-        return name.length();
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(name, latitude, longitude, address1, city, state, zip, type, phoneNum, url);
     }
 }

@@ -17,6 +17,7 @@ import java.lang.reflect.Array;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 import TEAM79b.m4.R;
@@ -27,6 +28,7 @@ import TEAM79b.m4.model.LocationContainer;
 public class AppScreen extends AppCompatActivity {
 
     private static final String TAG = "MY_APP";
+    LocationContainer locContainer = LocationContainer.getInstance();
 
     private Button loadLocations;
 
@@ -52,7 +54,7 @@ public class AppScreen extends AppCompatActivity {
     }
 
     public void loadLocations(View view) {
-        LocationContainer model = LocationContainer.getInstance();
+        //HashMap<Location, List<Item>> model = locContainer.getLocationMap();
 
         try {
             InputStream locationStream = getResources().openRawResource(R.raw.locationdata);
@@ -67,9 +69,10 @@ public class AppScreen extends AppCompatActivity {
                 //List<String> locationDataTemp = Arrays.asList(tokens[2], tokens[3], tokens[4], tokens[5], tokens[6], tokens[7], tokens[8], tokens[9], tokens[10]);
                 Location keyEntry = new Location(tokens[1], Float.parseFloat(tokens[2]), Float.parseFloat(tokens[3]), tokens[4], tokens[5], tokens[6], Integer.parseInt(tokens[7]), tokens[8], tokens[9], tokens[10]);
                 Item dog = new Item("a",keyEntry, "a","a", 3, "a");
-                List<Item> valueEntry = new ArrayList<>();
+                ArrayList<Item> valueEntry = new ArrayList<>();
                 valueEntry.add(dog);
-                model.addLocation(keyEntry, valueEntry);
+                locContainer.addLocation(keyEntry, valueEntry);
+                //model.addLocation(keyEntry, valueEntry);
                 startActivity(new Intent(AppScreen.this, LocationList.class));
                 //model.addUser(new String(tokens[NAME_POSITION], tokens[2], id, tokens[3]));
             }

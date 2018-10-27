@@ -46,11 +46,13 @@ public class ItemEntryScreen extends AppCompatActivity implements Serializable {
     public void addNewItem(View view) {
         LocationContainer locContainer = LocationContainer.getInstance();
         HashMap<Location, List<Item>> locations = locContainer.getLocationMap();
-        Location location = (Location) getIntent().getSerializableExtra("LocationObj");
+        Location location = (Location) getIntent().getSerializableExtra("locationObj");
         Item item = new Item(itemTime.getText().toString(), location, itemSDesc.getText().toString()
                 , itemLDesc.getText().toString(), Float.parseFloat(itemVal.getText().toString()), itemCat.getText().toString());
         locations.get(location).add(item);
-        startActivity(new Intent(ItemEntryScreen.this, ItemListScreen.class));
+        Intent intent = new Intent(ItemEntryScreen.this, ItemListScreen.class);
+        intent.putExtra("LocationObj", location);
+        startActivity(intent);
     }
 
     private void goToItemList() {
@@ -58,7 +60,10 @@ public class ItemEntryScreen extends AppCompatActivity implements Serializable {
         goItemList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ItemEntryScreen.this, ItemListScreen.class));
+                Location location = (Location)  getIntent().getSerializableExtra("locationObj");
+                Intent intent = new Intent(ItemEntryScreen.this, ItemListScreen.class);
+                intent.putExtra("LocationObj", location);
+                startActivity(intent);
             }
         });
     }

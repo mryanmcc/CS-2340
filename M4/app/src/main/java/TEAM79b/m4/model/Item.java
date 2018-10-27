@@ -1,6 +1,9 @@
 package TEAM79b.m4.model;
 
-public class Item {
+import java.io.Serializable;
+import java.util.Objects;
+
+public class Item implements Serializable {
     private String timeStamp;
     private Location location;
     private String shortDesc;
@@ -39,5 +42,24 @@ public class Item {
 
     public String getCategory() {
         return category;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Item item = (Item) o;
+        return Float.compare(item.value, value) == 0 &&
+                Objects.equals(timeStamp, item.timeStamp) &&
+                Objects.equals(location, item.location) &&
+                Objects.equals(shortDesc, item.shortDesc) &&
+                Objects.equals(longDesc, item.longDesc) &&
+                Objects.equals(category, item.category);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(timeStamp, location, shortDesc, longDesc, value, category);
     }
 }

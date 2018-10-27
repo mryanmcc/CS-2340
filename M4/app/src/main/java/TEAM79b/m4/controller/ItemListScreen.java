@@ -3,6 +3,7 @@ package TEAM79b.m4.controller;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -22,8 +24,9 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
 
     private ListView listView;
     private ArrayAdapter adapter;
-    private LocationContainer locContainer = LocationContainer.getInstance();
-    private HashMap<Location, List<Item>> locMap = locContainer.getLocationMap();
+//    private LocationContainer locContainer = LocationContainer.getInstance();
+//    private HashMap<Location, List<Item>> locMap = locContainer.getLocationMap();
+    LocationContainer locContainer = LocationContainer.getInstance();
     private List<Item> values;
 
     @Override
@@ -31,9 +34,19 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_list_screen);
 
+       // HashMap<Location, List<Item>> locMap = locContainer.getLocationMap();
+        final List<Item> values;
+
         Location location = (Location) getIntent().getSerializableExtra("LocationObj");
+        //location.getZip();
+        Log.d("HELPOUTm", Integer.toString(locContainer.getLocationMap().size()));
+        Item dog = new Item("a",location, "ITEM_LIST","a", 3, "a");
+        ArrayList<Item> valueEntry = new ArrayList<>();
+        valueEntry.add(dog);
         location.getZip();
-        values = locMap.get(location);
+        locContainer.getLocationMap().get(location).add(dog);
+        values = locContainer.getLocationMap().get(location);
+        //valuesMain = values;
         final String[] itemValues = new String[values.size()];
         for (int i = 0; i < values.size(); i++) {
             itemValues[i] = values.get(i).getShortDesc();
@@ -41,17 +54,19 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
         listView = (ListView) findViewById(R.id.itemListView);
         adapter = new ArrayAdapter(ItemListScreen.this, android.R.layout.simple_list_item_1, itemValues);
         listView.setAdapter(adapter);
-        if (values.size() > 0) {
+        //if (values.size() > 0) {
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Item temp = values.get(position);
+                    Location location = (Location) getIntent().getSerializableExtra("LocationObj");
+                    Item tempValues = values.get(position);
                     Intent intent = new Intent(ItemListScreen.this, ItemDetailScreen.class);
-                    intent.putExtra("itemObj", (Serializable) temp);
+                    intent.putExtra("itemObj", tempValues);
+                    intent.putExtra("locationObj", location);
                     startActivity(intent);
                 }
             });
-        }
+        //}
 
         goToNewItem();
         goToLocation();
@@ -71,11 +86,14 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
     }
 
     private void goToLocation() {
+        final Location location = (Location) getIntent().getSerializableExtra("LocationObj");
         Button backToLoc = (Button) findViewById(R.id.backToLoc);
         backToLoc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ItemListScreen.this, detailScreen.class));
+                Intent intent = new Intent(ItemListScreen.this, detailScreen.class);
+                intent.putExtra("locationObj", location);
+                startActivity(intent);
             }
         });
     }
