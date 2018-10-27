@@ -40,11 +40,11 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
         Location location = (Location) getIntent().getSerializableExtra("LocationObj");
         //location.getZip();
         Log.d("HELPOUTm", Integer.toString(locContainer.getLocationMap().size()));
-        Item dog = new Item("a",location, "ITEM_LIST","a", 3, "a");
+        //Item dog = new Item("a",location, "ITEM_LIST","a", 3, "a");
         ArrayList<Item> valueEntry = new ArrayList<>();
-        valueEntry.add(dog);
+        //valueEntry.add(dog);
         location.getZip();
-        locContainer.getLocationMap().get(location).add(dog);
+        //locContainer.getLocationMap().get(location).add(dog);
         values = locContainer.getLocationMap().get(location);
         //valuesMain = values;
         final String[] itemValues = new String[values.size()];

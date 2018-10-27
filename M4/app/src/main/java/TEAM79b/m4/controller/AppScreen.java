@@ -68,9 +68,9 @@ public class AppScreen extends AppCompatActivity {
                 //int id = Integer.parseInt(tokens[0]);
                 //List<String> locationDataTemp = Arrays.asList(tokens[2], tokens[3], tokens[4], tokens[5], tokens[6], tokens[7], tokens[8], tokens[9], tokens[10]);
                 Location keyEntry = new Location(tokens[1], Float.parseFloat(tokens[2]), Float.parseFloat(tokens[3]), tokens[4], tokens[5], tokens[6], Integer.parseInt(tokens[7]), tokens[8], tokens[9], tokens[10]);
-                Item dog = new Item("a",keyEntry, "a","a", 3, "a");
+                //Item dog = new Item("a",keyEntry, "a","a", 3, "a");
                 ArrayList<Item> valueEntry = new ArrayList<>();
-                valueEntry.add(dog);
+                //valueEntry.add(dog);
                 locContainer.addLocation(keyEntry, valueEntry);
                 //model.addLocation(keyEntry, valueEntry);
                 startActivity(new Intent(AppScreen.this, LocationList.class));
