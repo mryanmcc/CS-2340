@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -19,6 +20,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import TEAM79b.m4.R;
 import TEAM79b.m4.model.Login;
@@ -34,6 +37,7 @@ public class RegisterScreen extends AppCompatActivity {
     private User user;
 
     private FirebaseAuth firebaseAuth;
+    private DatabaseReference mDatabase;
 
     private final Activity a = this;
 
@@ -77,6 +81,10 @@ public class RegisterScreen extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             //Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = firebaseAuth.getCurrentUser();
+                            mDatabase = FirebaseDatabase.getInstance().getReference();
+                            String[] userID = regEmail.getText().toString().split("\\.");
+                            mDatabase.child("users").child(userID[0]).setValue(user);
+                            mDatabase.child("users").child(userID[0]).child("role").setValue(roleSpinner.getSelectedItem().toString());
                             //user.updateProfile()
                             //User user = User
                                     //pass through from screen to screen
