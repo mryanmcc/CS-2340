@@ -47,6 +47,8 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
         //locContainer.getLocationMap().get(location).add(dog);
         values = locContainer.getLocationMap().get(location);
         //valuesMain = values;
+        Log.d("chica", locContainer.getLocationMap().toString());
+        //Log.d("chica", values.toString());
         final String[] itemValues = new String[values.size()];
         for (int i = 0; i < values.size(); i++) {
             itemValues[i] = values.get(i).getShortDesc();

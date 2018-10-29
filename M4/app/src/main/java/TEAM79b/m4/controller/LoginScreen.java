@@ -19,6 +19,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.GenericTypeIndicator;
 import com.google.firebase.database.ValueEventListener;
 
 import java.io.Serializable;
@@ -26,6 +27,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -76,7 +78,7 @@ public class LoginScreen extends AppCompatActivity implements Serializable {
                                     .child(userID)
                                     .child("locations")
                                     .getRef()
-                                    .addValueEventListener(new ValueEventListener() {
+                                    .addListenerForSingleValueEvent(new ValueEventListener() {
                                         @Override
                                         public void onDataChange(DataSnapshot dataSnapshot) {
                                             //@SuppressWarnings("unchecked")
@@ -92,11 +94,19 @@ public class LoginScreen extends AppCompatActivity implements Serializable {
                                             //Log.d("BRUH", dataSnapshot.getValue().toString());
                                             LocationContainer locContainer = LocationContainer.getInstance();
                                             for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                                                GenericTypeIndicator<List<Item>> t = new GenericTypeIndicator<List<Item>>() {};
+                                                //List<Item> itemList = snapshot.child("item_list").getValue(t);
                                                 Location loc = snapshot.getValue(Location.class);
-                                                locContainer.addLocation(loc, new ArrayList<Item>());
-
-                                                Log.d("HOLA", loc.toString());
+                                                List<Item> itemList = snapshot.child("item_list").getValue(t);
+                                                //List<Item> itemList = new ArrayList<Item>();
+                                                //Item dog = new Item("a",loc, "ITEM_LIST","a", 3, "a");
+                                                //itemList.add(dog);
+                                                locContainer.addLocation(loc, itemList);
+                                                Log.d("HOLAs", itemList.toString());
                                             }
+                                            Log.d("HOLAs", Integer.toString(locContainer.getLocationMap().size()));
+                                            Log.d("HOLAs", locContainer.getLocationMap().toString());
+
 //                                            Map<String, Object> locMap;
 //                                            locMap = (Map<String, Object>) dataSnapshot.getValue();
 //                                            for (Map.Entry<String, Object> entry : locMap.entrySet()){

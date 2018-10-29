@@ -115,6 +115,8 @@ public class RegisterScreen extends AppCompatActivity {
                                     Location keyEntry = new Location(tokens[1], Float.parseFloat(tokens[2]), Float.parseFloat(tokens[3]), tokens[4], tokens[5], tokens[6], Integer.parseInt(tokens[7]), tokens[8], tokens[9], tokens[10]);
                                     //Item dog = new Item("a",keyEntry, "a","a", 3, "a");
                                     ArrayList<Item> valueEntry = new ArrayList<>();
+                                    Item tempItem = new Item("NOW",keyEntry, "ITEM_LIST","Format of the ITEM_LIST", 0, "ITEM_LIST");
+                                    //valueEntry.add(tempItem);
                                     //valueEntry.add(dog);
                                     locContainer.addLocation(keyEntry, valueEntry);
                                 }
@@ -128,6 +130,9 @@ public class RegisterScreen extends AppCompatActivity {
                             Set<Location> locSet = locContainer.getLocationMap().keySet();
                             for (Location l : locSet) {
                                 mDatabase.child("users").child(userID).child("locations").child(l.toString()).setValue(l);
+                                List<Item> tempItemList = locContainer.getLocationMap().get(l);
+                                tempItemList.add(new Item("NOW",l, "ITEM_LIST","Format of the ITEM_LIST", 0, "ITEM_LIST"));
+                                mDatabase.child("users").child(userID).child("locations").child(l.toString()).child("item_list").setValue(tempItemList);
                             }
 
                             startActivity(new Intent(RegisterScreen.this, LoginScreen.class));
