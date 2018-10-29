@@ -15,6 +15,7 @@ public class Location implements Serializable {
     private String type;
     private String phoneNum;
     private String url;
+    private List<Item> itemList;
 
     public Location() {
 
@@ -111,6 +112,14 @@ public class Location implements Serializable {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public List<Item> getItemList() {
+        return itemList;
+    }
+
+    public void setItemList(List<Item> itemList) {
+        this.itemList = itemList;
     }
 
     @Override

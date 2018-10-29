@@ -15,12 +15,24 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 import TEAM79b.m4.R;
+import TEAM79b.m4.model.Item;
+import TEAM79b.m4.model.Location;
+import TEAM79b.m4.model.LocationContainer;
 import TEAM79b.m4.model.Login;
 
 public class LoginScreen extends AppCompatActivity implements Serializable {
@@ -55,6 +67,65 @@ public class LoginScreen extends AppCompatActivity implements Serializable {
                             // Sign in success, update UI with the signed-in user's information
                             //Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = firebaseAuth.getCurrentUser();
+                            mDatabase = FirebaseDatabase.getInstance().getReference();
+                            String userID = user.getEmail();
+                            String[] userIDArr = userID.split("\\.");
+                            userID = userIDArr[0];
+                            mDatabase
+                                    .child("users")
+                                    .child(userID)
+                                    .child("locations")
+                                    .getRef()
+                                    .addValueEventListener(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(DataSnapshot dataSnapshot) {
+                                            //@SuppressWarnings("unchecked")
+                                            //Map<String, Object> map = (Map<String, Object>) dataSnapshot.getValue();
+//                                String firstValue = (String) map.get("city");
+//                                String secondValue = (String) map.get("name");
+//                                String thirdValue = (String) map.get("state");
+//                            List<Item> itemList = (List<Item>) dataSnapshot.child("item_list").getValue();
+//                            GenericTypeIndicator<List<Item>> t = new GenericTypeIndicator<List<Item>>() {};
+//
+//                            List<Item> arr = dataSnapshot.getValue(t);
+                                            //try {
+                                            //Log.d("BRUH", dataSnapshot.getValue().toString());
+                                            LocationContainer locContainer = LocationContainer.getInstance();
+                                            for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                                                Location loc = snapshot.getValue(Location.class);
+                                                locContainer.addLocation(loc, new ArrayList<Item>());
+
+                                                Log.d("HOLA", loc.toString());
+                                            }
+//                                            Map<String, Object> locMap;
+//                                            locMap = (Map<String, Object>) dataSnapshot.getValue();
+//                                            for (Map.Entry<String, Object> entry : locMap.entrySet()){
+//                                                //Location singleLoc = (Location) entry.getValue();
+//                                                Map currLoc = (Map) entry.getValue();
+//                                                Integer zip = (Integer) currLoc.get("zip");
+//                                                Log.d("BRUH", zip.toString());
+//                                                //locContainer.addLocation((Location) singleLoc, new ArrayList<Item>());
+//                                            }
+                                            Log.d("BRUHs", Integer.toString(locContainer.getLocationMap().size()));
+//                                            Collection<Location> locSet;
+//                                            locSet = locMap.values();
+//                                            for (Location l : locSet) {
+//                                                locContainer.addLocation(l, new ArrayList<Item>());
+//                                            }
+//                                            Log.d("AMAZING", locSet.toString());
+                                            // } catch (NullPointerException e) {
+
+                                            //}
+                                            //locContainer.addLocation(dataSnapshot.getValue(Location.class), dataSnapshot.child("item_list").getValue(List.class));
+                                        }
+
+                                        @Override
+                                        public void onCancelled(DatabaseError databaseError) {/*Do Nothing*/}
+                                    });
+//                            mDatabase.child("users")
+//                                    .child(userID)
+//                                    .child("locations")
+//                                    .child(l.toString())
                             Intent intent = new Intent(LoginScreen.this, AppScreen.class);
                             intent.putExtra("user", user);
                             startActivity(intent);

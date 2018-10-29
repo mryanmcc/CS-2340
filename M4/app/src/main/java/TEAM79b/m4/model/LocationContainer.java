@@ -18,7 +18,7 @@ public class LocationContainer {
         locationMap = new HashMap<>();
     }
 
-    public void addLocation(Location location, ArrayList<Item> data) {
+    public void addLocation(Location location, List<Item> data) {
         locationMap.put(location, data);
     }
 

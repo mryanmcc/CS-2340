@@ -11,6 +11,10 @@ public class Item implements Serializable {
     private float value;
     private String category;
 
+    public Item() {
+
+    }
+
     public Item(String timeStamp, Location location, String shortDesc, String longDesc, float value, String category) {
         this.timeStamp = timeStamp;
         this.location = location;
