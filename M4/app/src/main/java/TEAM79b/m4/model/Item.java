@@ -62,4 +62,11 @@ public class Item implements Serializable {
 
         return Objects.hash(timeStamp, location, shortDesc, longDesc, value, category);
     }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "shortDesc='" + shortDesc + '\'' +
+                '}';
+    }
 }

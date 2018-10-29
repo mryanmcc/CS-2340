@@ -85,11 +85,7 @@ public class RegisterScreen extends AppCompatActivity {
                             String[] userID = regEmail.getText().toString().split("\\.");
                             mDatabase.child("users").child(userID[0]).setValue(user);
                             mDatabase.child("users").child(userID[0]).child("role").setValue(roleSpinner.getSelectedItem().toString());
-                            //user.updateProfile()
-                            //User user = User
-                                    //pass through from screen to screen
                             startActivity(new Intent(RegisterScreen.this, LoginScreen.class));
-                            //updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
                             //Log.w(TAG, "createUserWithEmail:failure", task.getException());

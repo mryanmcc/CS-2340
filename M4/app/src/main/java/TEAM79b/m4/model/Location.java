@@ -16,6 +16,10 @@ public class Location implements Serializable {
     private String phoneNum;
     private String url;
 
+    public Location() {
+
+    }
+
     public Location(String name, float latitude, float longitude, String address1, String city, String state, int zip, String type, String phoneNum, String url) {
         this.name = name;
         this.latitude = latitude;
@@ -130,5 +134,11 @@ public class Location implements Serializable {
     public int hashCode() {
 
         return Objects.hash(name, latitude, longitude, address1, city, state, zip, type, phoneNum, url);
+    }
+
+    @Override
+    public String toString() {
+        String[] tempName = name.split("\\.");
+        return tempName[0];
     }
 }
