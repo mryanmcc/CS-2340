@@ -59,7 +59,7 @@
         android:textSize="20sp"/>
 
     <TextView
-        android:id="@+id/itemValue"
+        android:id="@+id/itemVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/itemLDesc"
@@ -72,7 +72,7 @@
         android:id="@+id/itemCat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/itemValue"
+        android:layout_below="@id/itemVal"
         android:layout_marginTop="10dp"
         android:text="category"
         android:textSize="20sp"

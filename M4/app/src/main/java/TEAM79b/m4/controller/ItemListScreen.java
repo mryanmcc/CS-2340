@@ -37,13 +37,13 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
        // HashMap<Location, List<Item>> locMap = locContainer.getLocationMap();
         final List<Item> values;
 
-        Location location = (Location) getIntent().getSerializableExtra("LocationObj");
+        Location location = (Location) getIntent().getSerializableExtra("locationObj");
         //location.getZip();
         Log.d("HELPOUTm", Integer.toString(locContainer.getLocationMap().size()));
         //Item dog = new Item("a",location, "ITEM_LIST","a", 3, "a");
         ArrayList<Item> valueEntry = new ArrayList<>();
         //valueEntry.add(dog);
-        location.getZip();
+//        location.getZip();
         //locContainer.getLocationMap().get(location).add(dog);
         values = locContainer.getLocationMap().get(location);
         //valuesMain = values;
@@ -60,7 +60,7 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Location location = (Location) getIntent().getSerializableExtra("LocationObj");
+                    Location location = (Location) getIntent().getSerializableExtra("locationObj");
                     Item tempValues = values.get(position);
                     Intent intent = new Intent(ItemListScreen.this, ItemDetailScreen.class);
                     intent.putExtra("itemObj", tempValues);
@@ -75,7 +75,7 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
     }
 
     private void goToNewItem() {
-        final Location location = (Location) getIntent().getSerializableExtra("LocationObj");
+        final Location location = (Location) getIntent().getSerializableExtra("locationObj");
         Button goAddItem = (Button) findViewById(R.id.goAddItem);
         goAddItem.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,7 +88,7 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
     }
 
     private void goToLocation() {
-        final Location location = (Location) getIntent().getSerializableExtra("LocationObj");
+        final Location location = (Location) getIntent().getSerializableExtra("locationObj");
         Button backToLoc = (Button) findViewById(R.id.backToLoc);
         backToLoc.setOnClickListener(new View.OnClickListener() {
             @Override

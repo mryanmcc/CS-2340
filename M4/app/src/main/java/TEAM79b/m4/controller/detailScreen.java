@@ -77,7 +77,7 @@ public class detailScreen extends AppCompatActivity implements Serializable {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(detailScreen.this, ItemListScreen.class);
-                intent.putExtra("LocationObj", location);
+                intent.putExtra("locationObj", location);
                 startActivity(intent);
             }
         });
