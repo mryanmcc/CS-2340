@@ -23,7 +23,6 @@ public class SearchScreen extends AppCompatActivity {
     private Spinner locSpinner;
     private EditText itemEntry;
     private EditText catEntry;
-    private ArrayAdapter<String> adapter;
     private LocationContainer locContainer = LocationContainer.getInstance();
     private HashMap<Location, List<Item>> locationKeys = locContainer.getLocationMap();
 
@@ -45,7 +44,7 @@ public class SearchScreen extends AppCompatActivity {
 
         locSpinner = findViewById(R.id.locSpinner);
 
-        adapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item, keyList);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, keyList);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         locSpinner.setAdapter(adapter);
     }
@@ -53,22 +52,20 @@ public class SearchScreen extends AppCompatActivity {
     public void searchItem(View view) {
         String location = locSpinner.getSelectedItem().toString();
         String itemName = itemEntry.getText().toString();
-        int mode = 0;
         Intent intent = new Intent(SearchScreen.this, SearchListScreen.class);
         intent.putExtra("locationName", location);
         intent.putExtra("itemName", itemName);
-        intent.putExtra("mode", mode);
+        intent.putExtra("mode", 0);
         startActivity(intent);
     }
 
     public void searchCat(View view) {
         String location = locSpinner.getSelectedItem().toString();
         String catName = catEntry.getText().toString();
-        int mode = 1;
         Intent intent = new Intent(SearchScreen.this, SearchListScreen.class);
         intent.putExtra("locationName", location);
         intent.putExtra("catName", catName);
-        intent.putExtra("mode", mode);
+        intent.putExtra("mode", 1);
         startActivity(intent);
     }
 

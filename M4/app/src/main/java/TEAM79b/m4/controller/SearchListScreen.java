@@ -39,6 +39,11 @@ public class SearchListScreen extends AppCompatActivity {
         final String catName = getIntent().getStringExtra("catName");
         final int mode = getIntent().getIntExtra("mode", 0);
 
+//        final String locationName = "All Locations";
+//        final String itemName = "hi";
+//        final String catName = "hi";
+//        final int mode = 1;
+
         if (locationName.compareTo("All Locations") == 0) {
             for (Location loc: keyListTemp) {
                 values.addAll(locContainer.getLocationMap().get(loc));
@@ -50,17 +55,24 @@ public class SearchListScreen extends AppCompatActivity {
                 }
             }
         }
-        final String[] itemValues = new String[values.size()];
+        final List<Item> newValues = new ArrayList<>();
         for (int i = 0; i < values.size(); i++) {
             if (mode == 0) {
                 if (values.get(i).getShortDesc().compareTo(itemName) == 0) {
-                    itemValues[i] = values.get(i).getShortDesc();
+                    newValues.add(values.get(i));
                 }
             } else {
                 if (values.get(i).getCategory().compareTo(catName) == 0) {
-                    itemValues[i] = values.get(i).getShortDesc();
+                    newValues.add(values.get(i));
                 }
             }
+        }
+        String[] itemValues = new String[newValues.size()];
+        for (int i = 0; i < newValues.size(); i++) {
+            itemValues[i] = newValues.get(i).getShortDesc();
+        }
+        if (itemValues[0] == null) {
+            itemValues = new String[] {"no data"};
         }
         listView = findViewById(R.id.searchListView);
         adapter = new ArrayAdapter(SearchListScreen.this, android.R.layout.simple_list_item_1, itemValues);
@@ -68,8 +80,8 @@ public class SearchListScreen extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Location location = (Location) getIntent().getSerializableExtra("locationObj");
-                Item tempValues = values.get(position);
+                Location location = newValues.get(position).getLocation();
+                Item tempValues = newValues.get(position);
                 Intent intent = new Intent(SearchListScreen.this, SearchDetailScreen.class);
                 intent.putExtra("itemObj", tempValues);
                 intent.putExtra("locationObj", location);
