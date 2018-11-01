@@ -39,13 +39,13 @@ public class SearchListScreen extends AppCompatActivity {
         final String catName = getIntent().getStringExtra("catName");
         final int mode = getIntent().getIntExtra("mode", 0);
 
-        if (locationName.equals("All Locations")) {
+        if (locationName.compareTo("All Locations") == 0) {
             for (Location loc: keyListTemp) {
                 values.addAll(locContainer.getLocationMap().get(loc));
             }
         } else {
             for (Location loc: keyListTemp) {
-                if (loc.getName().equals(locationName)) {
+                if (loc.getName().compareTo(locationName) == 0) {
                     values.addAll(locContainer.getLocationMap().get(loc));
                 }
             }
@@ -53,11 +53,11 @@ public class SearchListScreen extends AppCompatActivity {
         final String[] itemValues = new String[values.size()];
         for (int i = 0; i < values.size(); i++) {
             if (mode == 0) {
-                if (values.get(i).getShortDesc().equals(itemName)) {
+                if (values.get(i).getShortDesc().compareTo(itemName) == 0) {
                     itemValues[i] = values.get(i).getShortDesc();
                 }
             } else {
-                if (values.get(i).getCategory().equals(catName)) {
+                if (values.get(i).getCategory().compareTo(catName) == 0) {
                     itemValues[i] = values.get(i).getShortDesc();
                 }
             }
