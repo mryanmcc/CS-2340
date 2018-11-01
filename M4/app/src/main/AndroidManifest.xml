@@ -36,6 +36,7 @@
         <activity android:name=".controller.SearchScreen" />
         <activity android:name=".controller.SearchListScreen" />
         <activity android:name=".controller.SearchDetailScreen"></activity>
+
     </application>
 
 </manifest>

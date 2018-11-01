@@ -30,6 +30,7 @@ public class LocationListScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location_list_screen);
+        
 
         Set<Location> keys = locationKeys.keySet();
         final Location[] keyListTemp = keys.toArray(new Location[keys.size()]);
