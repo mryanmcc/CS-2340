@@ -71,9 +71,7 @@ public class SearchListScreen extends AppCompatActivity {
         for (int i = 0; i < newValues.size(); i++) {
             itemValues[i] = newValues.get(i).getShortDesc();
         }
-        if (itemValues[0] == null) {
-            itemValues = new String[] {"no data"};
-        }
+        
         listView = findViewById(R.id.searchListView);
         adapter = new ArrayAdapter(SearchListScreen.this, android.R.layout.simple_list_item_1, itemValues);
         listView.setAdapter(adapter);
