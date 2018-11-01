@@ -12,7 +12,6 @@ import android.widget.ListView;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import TEAM79b.m4.R;
@@ -93,7 +92,7 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
         backToLoc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ItemListScreen.this, detailScreen.class);
+                Intent intent = new Intent(ItemListScreen.this, DetailScreen.class);
                 intent.putExtra("locationObj", location);
                 startActivity(intent);
             }

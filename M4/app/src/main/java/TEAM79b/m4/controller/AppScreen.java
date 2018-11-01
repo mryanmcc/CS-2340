@@ -3,48 +3,23 @@ package TEAM79b.m4.controller;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.GenericTypeIndicator;
-import com.google.firebase.database.ValueEventListener;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.Serializable;
-import java.lang.reflect.Array;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 import TEAM79b.m4.R;
-import TEAM79b.m4.model.Item;
-import TEAM79b.m4.model.Location;
-import TEAM79b.m4.model.LocationContainer;
 
 public class AppScreen extends AppCompatActivity implements Serializable {
 
-    private static final String TAG = "MY_APP";
-    LocationContainer locContainer = LocationContainer.getInstance();
+//    private static final String TAG = "MY_APP";
+//    LocationContainer locContainer = LocationContainer.getInstance();
 
-    private Button loadLocations;
+//    private Button loadLocations;
 
-    private DatabaseReference mDatabase;
+//    private DatabaseReference mDatabase;
 
 
     @Override
@@ -52,20 +27,12 @@ public class AppScreen extends AppCompatActivity implements Serializable {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app_screen);
 
-        loadLocations = (Button) findViewById(R.id.loadLocButton);
+//        loadLocations = (Button) findViewById(R.id.loadLocButton);
 
-
-        goToWelcome();
     }
 
-    private void goToWelcome() {
-        Button goWelcome = (Button) findViewById(R.id.goWelcome);
-        goWelcome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(AppScreen.this, WelcomeScreen.class));
-            }
-        });
+    public void goToWelcome(View view) {
+        startActivity(new Intent(AppScreen.this, WelcomeScreen.class));
     }
 
     public void loadLocations(View view) {
@@ -180,6 +147,10 @@ public class AppScreen extends AppCompatActivity implements Serializable {
 ////            //List<Item> itemList = locContainer.getLocationMap().get(l);
 //////        }
 ////    }
-        startActivity(new Intent(AppScreen.this, LocationList.class));
+        startActivity(new Intent(AppScreen.this, LocationListScreen.class));
+    }
+
+    public void goToSearch(View view) {
+        startActivity(new Intent(AppScreen.this, SearchScreen.class));
     }
 }

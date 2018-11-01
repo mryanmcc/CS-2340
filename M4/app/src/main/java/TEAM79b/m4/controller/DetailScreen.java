@@ -8,15 +8,13 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.io.Serializable;
-import java.util.HashMap;
 import java.util.List;
 
 import TEAM79b.m4.R;
-import TEAM79b.m4.model.Item;
 import TEAM79b.m4.model.Location;
 import TEAM79b.m4.model.LocationContainer;
 
-public class detailScreen extends AppCompatActivity implements Serializable {
+public class DetailScreen extends AppCompatActivity implements Serializable {
 
 //    private LocationContainer locContainer = LocationContainer.getInstance();
 //    private HashMap<Location, List<Item>> model = locContainer.getLocationMap();
@@ -65,7 +63,7 @@ public class detailScreen extends AppCompatActivity implements Serializable {
         backToList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(detailScreen.this, LocationList.class));
+                startActivity(new Intent(DetailScreen.this, LocationListScreen.class));
             }
         });
     }
@@ -76,7 +74,7 @@ public class detailScreen extends AppCompatActivity implements Serializable {
         goItemList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(detailScreen.this, ItemListScreen.class);
+                Intent intent = new Intent(DetailScreen.this, ItemListScreen.class);
                 intent.putExtra("locationObj", location);
                 startActivity(intent);
             }

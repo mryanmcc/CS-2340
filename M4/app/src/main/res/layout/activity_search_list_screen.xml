@@ -4,25 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".controller.locList">
+    tools:context=".controller.SearchListScreen">
 
     <ListView
-        android:id="@+id/locListView"
+        android:id="@+id/searchListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_alignBottom="@id/backToApp"
+        android:layout_alignBottom="@id/backSearch"
         android:layout_marginBottom="45dp"/>
 
     <Button
-        android:id="@+id/backToApp"
+        android:id="@+id/backSearch"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
+        android:onClick="backToSearch"
         android:text="Go Back" />
-
-
 
 </RelativeLayout>
