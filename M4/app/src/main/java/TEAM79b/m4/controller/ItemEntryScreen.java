@@ -70,7 +70,7 @@ public class ItemEntryScreen extends AppCompatActivity implements Serializable {
         //tempItemList.add(new Item("NOW",l, "ITEM_LIST","Format of the ITEM_LIST", 0, "ITEM_LIST"));
         mDatabase.child("users").child(userID).child("locations").child(location.toString()).child("item_list").setValue(tempItemList);
         Intent intent = new Intent(ItemEntryScreen.this, ItemListScreen.class);
-        intent.putExtra("LocationObj", location);
+        intent.putExtra("locationObj", location);
         startActivity(intent);
     }
 
@@ -81,7 +81,7 @@ public class ItemEntryScreen extends AppCompatActivity implements Serializable {
             public void onClick(View view) {
                 Location location = (Location)  getIntent().getSerializableExtra("locationObj");
                 Intent intent = new Intent(ItemEntryScreen.this, ItemListScreen.class);
-                intent.putExtra("LocationObj", location);
+                intent.putExtra("locationObj", location);
                 startActivity(intent);
             }
         });

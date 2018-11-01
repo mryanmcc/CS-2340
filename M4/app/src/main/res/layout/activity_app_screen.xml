@@ -35,11 +35,22 @@
         android:text="Load Locations" />
 
     <Button
-        android:id="@+id/goWelcome"
+        android:id="@+id/loadSearchButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/loadLocButton"
+        android:layout_marginBottom="15dp"
+        android:onClick="goToSearch"
+        android:text="Item Search" />
+
+    <Button
+        android:id="@+id/goWelcome"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/loadSearchButton"
+        android:onClick="goToWelcome"
         android:text="Go Back" />
 
 </RelativeLayout>

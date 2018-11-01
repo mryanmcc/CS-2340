@@ -28,11 +28,14 @@
         <activity
             android:name=".controller.BadIdScreen"
             android:theme="@style/AppTheme.PopUp" />
-        <activity android:name=".controller.LocationList" />
-        <activity android:name=".controller.detailScreen" />
+        <activity android:name=".controller.LocationListScreen" />
+        <activity android:name=".controller.DetailScreen" />
         <activity android:name=".controller.ItemEntryScreen" />
         <activity android:name=".controller.ItemListScreen" />
-        <activity android:name=".controller.ItemDetailScreen"></activity>
+        <activity android:name=".controller.ItemDetailScreen" />
+        <activity android:name=".controller.SearchScreen" />
+        <activity android:name=".controller.SearchListScreen" />
+        <activity android:name=".controller.SearchDetailScreen"></activity>
     </application>
 
 </manifest>
