@@ -27,6 +27,7 @@ public class DetailScreen extends AppCompatActivity implements Serializable {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_screen);
 
+
         Intent intent = getIntent();
         String key = intent.getStringExtra("key");
         //values = (List<String>) model.get(key);
