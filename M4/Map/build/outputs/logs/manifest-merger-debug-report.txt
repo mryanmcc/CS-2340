@@ -1,0 +1,190 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:3:1-51:12
+INJECTED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:3:1-51:12
+INJECTED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:3:1-51:12
+INJECTED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:3:1-51:12
+MERGED from [com.android.support:appcompat-v7:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/316b2cd8d7880d933599b160f9ce54f5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-maps:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-maps-12.0.1.aar/a0ee94d7157949b61b9b439e009f6aed/AndroidManifest.xml:17:1-32:12
+MERGED from [com.google.android.gms:play-services-base:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/8211748513a48409c719702b70c3777a/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-tasks-12.0.1.aar/e3b4236397b36651970d2ebfc7e4ac9a/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-basement-12.0.1.aar/c7b02d1a0165182c4c5f16bdc2abb053/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/0a8690198188397ebfd9028b85e14bdc/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/692dca5d5267047c71d944267c775a6c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/0017ca7caf8d3033e74d85fb5a584654/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/639d97d31395450f9a26388a5a04d044/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/53e172ceb1c845f2fed5efdf8a1ae5e0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/c4d22402097b5da7025458b5529e9160/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/629f7de09fc28affcdd8b5cecf5f9864/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/52eaebb16e7dfe6f3b064c9117366490/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/60a66d952ba70983a62dc4dcc2a6bce9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-maps-license:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-maps-license-12.0.1.aar/4e65fb74bd053fd2382fe6f9121f2ef9/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base-license:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-base-license-12.0.1.aar/dbd8f67675fe9030a1ae1120eeae8319/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-basement-license:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-12.0.1.aar/5e791efc653edf19b9eebba0692b6998/AndroidManifest.xml:17:1-24:12
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/678771d04402c8dbc4b8a444c3d13d54/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-12.0.1.aar/f824a60a60fb346a3686607185f25c73/AndroidManifest.xml:17:1-24:12
+INJECTED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:3:1-51:12
+INJECTED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:3:1-51:12
+INJECTED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:3:1-51:12
+	package
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:4:5-34
+		INJECTED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml
+		INJECTED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:3:1-51:12
+		INJECTED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:3:1-51:12
+		INJECTED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:3:11-69
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:11:22-76
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:14:5-16:38
+	android:maxSdkVersion
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:16:9-35
+	android:name
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:15:9-65
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:17:5-19:38
+	android:maxSdkVersion
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:19:9-35
+	android:name
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:18:9-64
+application
+ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:21:5-49:19
+MERGED from [com.google.android.gms:play-services-maps:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-maps-12.0.1.aar/a0ee94d7157949b61b9b439e009f6aed/AndroidManifest.xml:30:5-20
+MERGED from [com.google.android.gms:play-services-maps:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-maps-12.0.1.aar/a0ee94d7157949b61b9b439e009f6aed/AndroidManifest.xml:30:5-20
+MERGED from [com.google.android.gms:play-services-base:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/8211748513a48409c719702b70c3777a/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/8211748513a48409c719702b70c3777a/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-tasks-12.0.1.aar/e3b4236397b36651970d2ebfc7e4ac9a/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-tasks-12.0.1.aar/e3b4236397b36651970d2ebfc7e4ac9a/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-basement-12.0.1.aar/c7b02d1a0165182c4c5f16bdc2abb053/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-basement-12.0.1.aar/c7b02d1a0165182c4c5f16bdc2abb053/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-maps-license:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-maps-license-12.0.1.aar/4e65fb74bd053fd2382fe6f9121f2ef9/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps-license:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-maps-license-12.0.1.aar/4e65fb74bd053fd2382fe6f9121f2ef9/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base-license:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-base-license-12.0.1.aar/dbd8f67675fe9030a1ae1120eeae8319/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base-license:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-base-license-12.0.1.aar/dbd8f67675fe9030a1ae1120eeae8319/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-12.0.1.aar/5e791efc653edf19b9eebba0692b6998/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-12.0.1.aar/5e791efc653edf19b9eebba0692b6998/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-12.0.1.aar/f824a60a60fb346a3686607185f25c73/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-12.0.1.aar/f824a60a60fb346a3686607185f25c73/AndroidManifest.xml:22:5-20
+	android:supportsRtl
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:24:9-35
+	android:label
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:23:9-43
+	android:allowBackup
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:22:9-35
+	android:theme
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:25:9-40
+meta-data#com.google.android.geo.API_KEY
+ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:35:9-37:55
+	android:value
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:37:13-52
+	android:name
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:36:13-58
+activity#com.example.mapdemo.MainActivity
+ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:39:9-44:20
+	android:name
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:39:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:40:13-43:29
+action#android.intent.action.MAIN
+ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:41:17-68
+	android:name
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:41:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:42:17-76
+	android:name
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:42:27-74
+activity#com.example.mapdemo.BasicMapDemoActivity
+ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:45:9-47:59
+	android:label
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:47:13-57
+	android:name
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml:46:13-49
+uses-sdk
+INJECTED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml
+INJECTED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/316b2cd8d7880d933599b160f9ce54f5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/316b2cd8d7880d933599b160f9ce54f5/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-maps-12.0.1.aar/a0ee94d7157949b61b9b439e009f6aed/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-maps-12.0.1.aar/a0ee94d7157949b61b9b439e009f6aed/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/8211748513a48409c719702b70c3777a/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/8211748513a48409c719702b70c3777a/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-tasks-12.0.1.aar/e3b4236397b36651970d2ebfc7e4ac9a/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-tasks-12.0.1.aar/e3b4236397b36651970d2ebfc7e4ac9a/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-basement-12.0.1.aar/c7b02d1a0165182c4c5f16bdc2abb053/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-basement-12.0.1.aar/c7b02d1a0165182c4c5f16bdc2abb053/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/0a8690198188397ebfd9028b85e14bdc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/0a8690198188397ebfd9028b85e14bdc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/692dca5d5267047c71d944267c775a6c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/692dca5d5267047c71d944267c775a6c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/0017ca7caf8d3033e74d85fb5a584654/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/0017ca7caf8d3033e74d85fb5a584654/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/639d97d31395450f9a26388a5a04d044/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/639d97d31395450f9a26388a5a04d044/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/53e172ceb1c845f2fed5efdf8a1ae5e0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/53e172ceb1c845f2fed5efdf8a1ae5e0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/c4d22402097b5da7025458b5529e9160/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/c4d22402097b5da7025458b5529e9160/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/629f7de09fc28affcdd8b5cecf5f9864/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/629f7de09fc28affcdd8b5cecf5f9864/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/52eaebb16e7dfe6f3b064c9117366490/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/52eaebb16e7dfe6f3b064c9117366490/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/60a66d952ba70983a62dc4dcc2a6bce9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/60a66d952ba70983a62dc4dcc2a6bce9/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps-license:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-maps-license-12.0.1.aar/4e65fb74bd053fd2382fe6f9121f2ef9/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps-license:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-maps-license-12.0.1.aar/4e65fb74bd053fd2382fe6f9121f2ef9/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base-license:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-base-license-12.0.1.aar/dbd8f67675fe9030a1ae1120eeae8319/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base-license:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-base-license-12.0.1.aar/dbd8f67675fe9030a1ae1120eeae8319/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement-license:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-12.0.1.aar/5e791efc653edf19b9eebba0692b6998/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement-license:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-12.0.1.aar/5e791efc653edf19b9eebba0692b6998/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/678771d04402c8dbc4b8a444c3d13d54/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/678771d04402c8dbc4b8a444c3d13d54/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-12.0.1.aar/f824a60a60fb346a3686607185f25c73/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-12.0.1.aar/f824a60a60fb346a3686607185f25c73/AndroidManifest.xml:20:5-44
+INJECTED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml
+INJECTED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml
+		INJECTED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml
+		ADDED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml
+		INJECTED from /Users/Yunha/Downloads/CS-2340-master 4/M4/Map/src/main/AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-maps-12.0.1.aar/a0ee94d7157949b61b9b439e009f6aed/AndroidManifest.xml:23:5-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-maps-12.0.1.aar/a0ee94d7157949b61b9b439e009f6aed/AndroidManifest.xml:23:22-76
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.android.gms:play-services-maps:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-maps-12.0.1.aar/a0ee94d7157949b61b9b439e009f6aed/AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-maps-12.0.1.aar/a0ee94d7157949b61b9b439e009f6aed/AndroidManifest.xml:24:22-64
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-maps-12.0.1.aar/a0ee94d7157949b61b9b439e009f6aed/AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-maps-12.0.1.aar/a0ee94d7157949b61b9b439e009f6aed/AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-maps-12.0.1.aar/a0ee94d7157949b61b9b439e009f6aed/AndroidManifest.xml:28:9-32
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/8211748513a48409c719702b70c3777a/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/8211748513a48409c719702b70c3777a/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/8211748513a48409c719702b70c3777a/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/8211748513a48409c719702b70c3777a/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-basement-12.0.1.aar/c7b02d1a0165182c4c5f16bdc2abb053/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-basement-12.0.1.aar/c7b02d1a0165182c4c5f16bdc2abb053/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:12.0.1] /Users/Yunha/.gradle/caches/transforms-1/files-1.1/play-services-basement-12.0.1.aar/c7b02d1a0165182c4c5f16bdc2abb053/AndroidManifest.xml:24:13-58
