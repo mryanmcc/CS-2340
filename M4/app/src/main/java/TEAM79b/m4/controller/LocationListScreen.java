@@ -34,10 +34,7 @@ public class LocationListScreen extends AppCompatActivity {
 
         Set<Location> keys = locationKeys.keySet();
         final Location[] keyListTemp = keys.toArray(new Location[keys.size()]);
-        final String[] keyList = new String[keys.size()];
-        for (int i = 0; i < keyListTemp.length; i++) {
-            keyList[i] = keyListTemp[i].getName();
-        }
+        final String[] keyList = LocationContainer.getInstance().keyList();
         listView = (ListView) findViewById(R.id.locListView);
         adapter = new ArrayAdapter(LocationListScreen.this, android.R.layout.simple_list_item_1, keyList);
         listView.setAdapter(adapter);
