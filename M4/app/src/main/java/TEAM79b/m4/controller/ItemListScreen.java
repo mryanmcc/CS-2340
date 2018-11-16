@@ -69,7 +69,7 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
      */
     private void goToNewItem() {
         final Location location = (Location) getIntent().getSerializableExtra("locationObj");
-        Button goAddItem = (Button) findViewById(R.id.goAddItem);
+        Button goAddItem = findViewById(R.id.goAddItem);
         goAddItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,7 +85,7 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
      */
     private void goToLocation() {
         final Location location = (Location) getIntent().getSerializableExtra("locationObj");
-        Button backToLoc = (Button) findViewById(R.id.backToLoc);
+        Button backToLoc = findViewById(R.id.backToLoc);
         backToLoc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

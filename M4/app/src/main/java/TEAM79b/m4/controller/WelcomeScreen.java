@@ -77,7 +77,7 @@ public class WelcomeScreen extends AppCompatActivity {
      * takes users to the login screen
      */
     private void goToLogin() {
-        Button goLogin = (Button) findViewById(R.id.goLogin);
+        Button goLogin = findViewById(R.id.goLogin);
         goLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,7 +90,7 @@ public class WelcomeScreen extends AppCompatActivity {
      * takes users to the registration screen
      */
     private void goToRegister() {
-        Button goRegister = (Button) findViewById(R.id.goRegister);
+        Button goRegister = findViewById(R.id.goRegister);
         goRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -77,7 +77,7 @@ public class RegisterScreen extends AppCompatActivity {
      * goes back to the welcome screen with a back button
      */
     private void goToWelcome() {
-        Button regBack = (Button) findViewById(R.id.regBack);
+        Button regBack = findViewById(R.id.regBack);
         regBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
