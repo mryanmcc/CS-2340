@@ -22,7 +22,8 @@
         android:layout_centerHorizontal="true"
         android:layout_above="@id/backToLoc"
         android:layout_marginBottom="10dp"
-        android:text="Add New Item" />
+        android:text="Add New Item"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/backToLoc"
@@ -30,6 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:text="Go Back" />
+        android:text="Go Back"
+        tools:ignore="HardcodedText" />
 
 </RelativeLayout>

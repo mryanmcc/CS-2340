@@ -16,7 +16,6 @@ import TEAM79b.m4.R;
 import TEAM79b.m4.model.Item;
 import TEAM79b.m4.model.Location;
 import TEAM79b.m4.model.LocationContainer;
-import TEAM79b.m4.model.User;
 
 /**
  * screen for users to search for items

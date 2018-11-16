@@ -13,7 +13,8 @@
         android:layout_centerHorizontal="true"
         android:layout_above="@id/goRegister"
         android:layout_marginBottom="30dp"
-        android:text="Login" />
+        android:text="Login"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/goRegister"
@@ -21,5 +22,6 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="Register" />
+        android:text="Register"
+        tools:ignore="HardcodedText" />
 </RelativeLayout>

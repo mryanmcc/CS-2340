@@ -42,11 +42,6 @@ public class SearchListScreen extends AppCompatActivity {
         final String catName = getIntent().getStringExtra("catName");
         final int mode = getIntent().getIntExtra("mode", 0);
 
-//        final String locationName = "All Locations";
-//        final String itemName = "hi";
-//        final String catName = "hi";
-//        final int mode = 1;
-
         if (locationName.compareTo("All Locations") == 0) {
             for (Location loc: keyListTemp) {
                 values.addAll(locContainer.getLocationMap().get(loc));

@@ -26,8 +26,6 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
 
     private ListView listView;
     private ArrayAdapter adapter;
-//    private LocationContainer locContainer = LocationContainer.getInstance();
-//    private HashMap<Location, List<Item>> locMap = locContainer.getLocationMap();
     LocationContainer locContainer = LocationContainer.getInstance();
     private List<Item> values;
 
@@ -35,22 +33,13 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_list_screen);
-
-       // HashMap<Location, List<Item>> locMap = locContainer.getLocationMap();
         final List<Item> values;
 
         Location location = (Location) getIntent().getSerializableExtra("locationObj");
-        //location.getZip();
         Log.d("HELPOUTm", Integer.toString(locContainer.getLocationMap().size()));
-        //Item dog = new Item("a",location, "ITEM_LIST","a", 3, "a");
         ArrayList<Item> valueEntry = new ArrayList<>();
-        //valueEntry.add(dog);
-//        location.getZip();
-        //locContainer.getLocationMap().get(location).add(dog);
         values = locContainer.getLocationMap().get(location);
-        //valuesMain = values;
         Log.d("chica", locContainer.getLocationMap().toString());
-        //Log.d("chica", values.toString());
         final String[] itemValues = new String[values.size()];
         for (int i = 0; i < values.size(); i++) {
             itemValues[i] = values.get(i).getShortDesc();
@@ -58,7 +47,6 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
         listView = (ListView) findViewById(R.id.itemListView);
         adapter = new ArrayAdapter(ItemListScreen.this, android.R.layout.simple_list_item_1, itemValues);
         listView.setAdapter(adapter);
-        //if (values.size() > 0) {
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

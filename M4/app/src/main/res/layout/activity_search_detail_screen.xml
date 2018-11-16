@@ -14,7 +14,8 @@
         android:layout_marginTop="10dp"
         android:text="time stamp"
         android:textSize="20sp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/itemLoc"
@@ -24,7 +25,8 @@
         android:layout_marginTop="10dp"
         android:text="location"
         android:textSize="20sp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/itemSDesc"
@@ -34,7 +36,8 @@
         android:layout_marginTop="10dp"
         android:text="short description"
         android:textSize="25sp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/itemLDTitle"
@@ -45,7 +48,8 @@
         android:text="Item Description:"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:textSize="15sp"/>
+        android:textSize="15sp"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/itemLDesc"
@@ -56,7 +60,8 @@
         android:text="long description"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/itemVal"
@@ -66,7 +71,8 @@
         android:layout_marginTop="30dp"
         android:text="value"
         android:textSize="20sp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/itemCat"
@@ -76,7 +82,8 @@
         android:layout_marginTop="10dp"
         android:text="category"
         android:textSize="20sp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText" />
 
 
     <Button
@@ -87,6 +94,7 @@
         android:layout_marginTop="30dp"
         android:layout_below="@id/itemCat"
         android:onClick="backToList"
-        android:text="Go Back" />
+        android:text="Go Back"
+        tools:ignore="HardcodedText" />
 
 </RelativeLayout>

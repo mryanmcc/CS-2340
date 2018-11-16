@@ -22,6 +22,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:onClick="backToSearch"
-        android:text="Go Back" />
+        android:text="Go Back"
+        tools:ignore="HardcodedText" />
 
 </RelativeLayout>

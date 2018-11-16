@@ -5,10 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -16,16 +14,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Set;
 
 import TEAM79b.m4.R;
 import TEAM79b.m4.model.Item;
 import TEAM79b.m4.model.Location;
 import TEAM79b.m4.model.LocationContainer;
-import TEAM79b.m4.model.User;
 
 /**
  * screen that allows the user to add a new item to a location
@@ -60,7 +54,6 @@ public class ItemEntryScreen extends AppCompatActivity implements Serializable {
      */
     public void addNewItem(View view) {
         LocationContainer locContainer = LocationContainer.getInstance();
-        //HashMap<Location, List<Item>> locations = locContainer.getLocationMap();
         Location location = (Location) getIntent().getSerializableExtra("locationObj");
         Item item = new Item(itemTime.getText().toString(), location, itemSDesc.getText().toString()
                 , itemLDesc.getText().toString(), Float.parseFloat(itemVal.getText().toString()), itemCat.getText().toString());
@@ -71,10 +64,8 @@ public class ItemEntryScreen extends AppCompatActivity implements Serializable {
         String userID = user.getEmail();
         String[] userIDArr = userID.split("\\.");
         userID = userIDArr[0];
-        //Set<Location> locSet = locContainer.getLocationMap().keySet();
         mDatabase.child("users").child(userID).child("locations").child(location.toString()).setValue(location);
         List<Item> tempItemList = locContainer.getLocationMap().get(location);
-        //tempItemList.add(new Item("NOW",l, "ITEM_LIST","Format of the ITEM_LIST", 0, "ITEM_LIST"));
         mDatabase.child("users").child(userID).child("locations").child(location.toString()).child("item_list").setValue(tempItemList);
         Intent intent = new Intent(ItemEntryScreen.this, ItemListScreen.class);
         intent.putExtra("locationObj", location);

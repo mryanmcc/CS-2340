@@ -14,7 +14,8 @@
         android:layout_marginTop="10dp"
         android:text="name"
         android:textSize="30sp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/detailLat"
@@ -24,7 +25,8 @@
         android:layout_marginTop="10dp"
         android:text="lat"
         android:textSize="20sp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/detailLon"
@@ -34,7 +36,8 @@
         android:layout_marginTop="10dp"
         android:text="lon"
         android:textSize="20sp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/detailAdd1"
@@ -44,7 +47,8 @@
         android:layout_marginTop="10dp"
         android:text="add1"
         android:textSize="25sp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/detailAdd2"
@@ -54,7 +58,8 @@
         android:layout_marginTop="10dp"
         android:text="add2"
         android:textSize="25sp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/detailType"
@@ -64,7 +69,8 @@
         android:layout_marginTop="10dp"
         android:text="type"
         android:textSize="20sp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/detailPhone"
@@ -74,7 +80,8 @@
         android:layout_marginTop="10dp"
         android:text="name"
         android:textSize="25sp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/detailWeb"
@@ -84,7 +91,8 @@
         android:layout_marginTop="10dp"
         android:text="name"
         android:textSize="25sp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/goItemList"
@@ -93,7 +101,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:layout_below="@id/detailWeb"
-        android:text="Go To Items" />
+        android:text="Go To Items"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/backToList"
@@ -102,7 +111,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_below="@id/goItemList"
-        android:text="Go Back" />
+        android:text="Go Back"
+        tools:ignore="HardcodedText" />
 
 
 

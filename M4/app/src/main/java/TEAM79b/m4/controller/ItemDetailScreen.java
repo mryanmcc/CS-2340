@@ -18,13 +18,6 @@ import TEAM79b.m4.model.Location;
  */
 public class ItemDetailScreen extends AppCompatActivity implements Serializable {
 
-    private TextView itemTimeStamp;
-    private TextView itemSDesc;
-    private TextView itemLDesc;
-    private TextView itemVal;
-    private TextView itemCat;
-    private TextView itemLoc;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -18,12 +18,7 @@ import TEAM79b.m4.model.LocationContainer;
  * location detail screen
  */
 public class DetailScreen extends AppCompatActivity implements Serializable {
-
-//    private LocationContainer locContainer = LocationContainer.getInstance();
-//    private HashMap<Location, List<Item>> model = locContainer.getLocationMap();
     private List<String> values;
-
-    //private Location locationMain = (Location) getIntent().getSerializableExtra("locationObj");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,13 +28,10 @@ public class DetailScreen extends AppCompatActivity implements Serializable {
 
         Intent intent = getIntent();
         String key = intent.getStringExtra("key");
-        //values = (List<String>) model.get(key);
 
         LocationContainer locContainer = LocationContainer.getInstance();
 
         Location location = (Location) getIntent().getSerializableExtra("locationObj");
-
-        //HashMap<Location, List<Item>> model = locContainer.getLocationMap();
 
         TextView detailName = (TextView) findViewById(R.id.detailName);
         detailName.setText(key);

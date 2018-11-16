@@ -59,7 +59,4 @@ public class LocationContainer {
         }
         return keyList;
     }
-
-    //the method you made for getting the map
-//    public Map<String, List<String>> locationMap() { return locationMap; }
 }

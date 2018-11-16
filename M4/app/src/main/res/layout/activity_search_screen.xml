@@ -13,7 +13,8 @@
         android:layout_above="@id/locSpinner"
         android:layout_alignStart="@+id/locSpinner"
         android:layout_marginBottom="10dp"
-        android:text="Location" />
+        android:text="Location"
+        tools:ignore="HardcodedText" />
 
     <Spinner
         android:id="@+id/locSpinner"
@@ -31,7 +32,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
         android:inputType="textPersonName"
-        android:hint="Item Name" />
+        android:hint="Item Name"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/itemSearch"
@@ -41,7 +43,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
         android:onClick="searchItem"
-        android:text="Search by Item Name" />
+        android:text="Search by Item Name"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/catEntry"
@@ -50,7 +53,8 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:inputType="textPersonName"
-        android:hint="Category Name" />
+        android:hint="Category Name"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/catSearch"
@@ -60,7 +64,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:onClick="searchCat"
-        android:text="Search by Category Name" />
+        android:text="Search by Category Name"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/goApp"
@@ -70,6 +75,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:onClick="goToApp"
-        android:text="Go Back" />
+        android:text="Go Back"
+        tools:ignore="HardcodedText" />
 
 </RelativeLayout>

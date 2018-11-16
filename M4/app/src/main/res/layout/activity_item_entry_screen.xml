@@ -15,7 +15,8 @@
         android:layout_marginBottom="5dp"
         android:gravity="top|left"
         android:scrollbars="vertical"
-        android:hint="Name/Short Description" />
+        android:hint="Name/Short Description"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/itemLDesc"
@@ -27,7 +28,8 @@
         android:layout_marginBottom="5dp"
         android:gravity="top|left"
         android:scrollbars="vertical"
-        android:hint="Long Description" />
+        android:hint="Long Description"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/itemVal"
@@ -36,7 +38,8 @@
         android:layout_above="@id/itemCat"
         android:layout_marginBottom="5dp"
         android:layout_centerHorizontal="true"
-        android:hint="Dollar Value" />
+        android:hint="Dollar Value"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/itemCat"
@@ -46,7 +49,8 @@
         android:layout_centerVertical="true"
         android:layout_marginBottom="5dp"
         android:ems="10"
-        android:hint="Category" />
+        android:hint="Category"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/itemTime"
@@ -57,7 +61,8 @@
         android:layout_marginBottom="5dp"
         android:ems="10"
         android:inputType="time"
-        android:hint="Time Stamp" />
+        android:hint="Time Stamp"
+        tools:ignore="HardcodedText" />
 
 
     <Button
@@ -68,7 +73,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
         android:onClick="addNewItem"
-        android:text="Add Item" />
+        android:text="Add Item"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/goItemList"
@@ -77,6 +83,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
-        android:text="Go Back" />
+        android:text="Go Back"
+        tools:ignore="HardcodedText" />
 
 </RelativeLayout>
