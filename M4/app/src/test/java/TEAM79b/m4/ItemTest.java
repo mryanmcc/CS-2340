@@ -18,34 +18,49 @@ public class ItemTest {
     private Item tempItem2 = new Item("2:00", tempLoc, "it", "a bit", 4, "Bar");
     private Item tempItem3 = new Item("3:00", tempLoc, "part", "some part", 5, "End");
 
+    /**
+     * time stamp test
+     */
     @Test
     public void testGetTimeStamp() {
-        assertTrue(tempItem.getTimeStamp() == "1:00");
-        assertTrue(tempItem2.getTimeStamp() == "2:00");
-        assertTrue(tempItem3.getTimeStamp() == "3:00");
+        assertTrue(tempItem.getTimeStamp().equals("1:00"));
+        assertTrue(tempItem.getTimeStamp().equals("2:00"));
+        assertTrue(tempItem.getTimeStamp().equals("3:00"));
     }
 
+    /**
+     * location test
+     */
     @Test
     public void testGetLocation() {
-        assertTrue(tempItem.getLocation() == tempLoc);
-        assertTrue(tempItem2.getLocation() == tempLoc);
-        assertTrue(tempItem3.getLocation() == tempLoc);
+        assertTrue(tempItem.getLocation().equals(tempLoc));
+        assertTrue(tempItem2.getLocation().equals(tempLoc));
+        assertTrue(tempItem3.getLocation().equals(tempLoc));
     }
 
+    /**
+     * short description test
+     */
     @Test
     public void testGetShortDesc() {
-        assertTrue(tempItem.getShortDesc() == "thing");
-        assertTrue(tempItem2.getShortDesc() == "it");
-        assertTrue(tempItem3.getShortDesc() == "part");
+        assertTrue(tempItem.getShortDesc().equals("thing"));
+        assertTrue(tempItem2.getShortDesc().equals("it"));
+        assertTrue(tempItem3.getShortDesc().equals("part"));
     }
 
+    /**
+     * long description test
+     */
     @Test
     public void testGetLongDesc() {
-        assertTrue(tempItem.getLongDesc() == "a thing");
-        assertTrue(tempItem2.getLongDesc() == "a bit");
-        assertTrue(tempItem3.getLongDesc() == "some part");
+        assertTrue(tempItem.getLongDesc().equals("a thing"));
+        assertTrue(tempItem2.getLongDesc().equals("a bit"));
+        assertTrue(tempItem3.getLongDesc().equals("some part"));
     }
 
+    /**
+     * value test
+     */
     @Test
     public void testGetValue() {
         assertTrue(tempItem.getValue() == 3);
@@ -53,13 +68,19 @@ public class ItemTest {
         assertTrue(tempItem3.getValue() == 5);
     }
 
+    /**
+     * category test
+     */
     @Test
     public void testGetCategory() {
-        assertTrue(tempItem.getCategory() == "Foo");
-        assertTrue(tempItem2.getCategory() == "Bar");
-        assertTrue(tempItem3.getCategory() == "End");
+        assertTrue(tempItem.getCategory().equals("Foo"));
+        assertTrue(tempItem2.getCategory().equals("Bar"));
+        assertTrue(tempItem3.getCategory().equals("End"));
     }
 
+    /**
+     * equals test
+     */
     @Test
     public void testEquals() {
         Item fooItem = new Item("1:00", tempLoc, "thing", "a thing", 3, "Foo");
@@ -70,6 +91,9 @@ public class ItemTest {
         assertTrue(tempItem3.equals(fooItem3));
     }
 
+    /**
+     * hashCode test
+     */
     @Test
     public void testHashCode() {
         assertTrue(tempItem.hashCode() == 2064192384);
@@ -77,6 +101,9 @@ public class ItemTest {
         assertTrue(tempItem3.hashCode() == -1441123422);
     }
 
+    /**
+     * toString test
+     */
     @Test
     public void testToString() {
         assertTrue(tempItem.toString().equals("Item{shortDesc='thing'}"));

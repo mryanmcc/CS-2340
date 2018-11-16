@@ -39,11 +39,11 @@ public class ItemEntryScreen extends AppCompatActivity implements Serializable {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_entry_screen);
 
-        itemSDesc = (EditText) findViewById(R.id.itemSDesc);
-        itemLDesc = (EditText) findViewById(R.id.itemLDesc);
-        itemVal = (EditText) findViewById(R.id.itemVal);
-        itemCat = (EditText) findViewById(R.id.itemCat);
-        itemTime = (EditText) findViewById(R.id.itemTime);
+        itemSDesc = findViewById(R.id.itemSDesc);
+        itemLDesc = findViewById(R.id.itemLDesc);
+        itemVal = findViewById(R.id.itemVal);
+        itemCat = findViewById(R.id.itemCat);
+        itemTime = findViewById(R.id.itemTime);
 
         goToItemList();
     }
@@ -60,7 +60,6 @@ public class ItemEntryScreen extends AppCompatActivity implements Serializable {
         locContainer.getLocationMap().get(location).add(item);
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        Log.d("blah", user.getEmail());
         String userID = user.getEmail();
         String[] userIDArr = userID.split("\\.");
         userID = userIDArr[0];
@@ -76,7 +75,7 @@ public class ItemEntryScreen extends AppCompatActivity implements Serializable {
      * goes to item list screen
      */
     private void goToItemList() {
-        Button goItemList = (Button) findViewById(R.id.goItemList);
+        Button goItemList = findViewById(R.id.goItemList);
         goItemList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -47,9 +47,9 @@ public class LoginScreen extends AppCompatActivity implements Serializable {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
 
-        loginEmail = (EditText) findViewById(R.id.loginEmail);
-        loginPass = (EditText) findViewById(R.id.loginPass);
-        loginSubmit = (Button) findViewById(R.id.loginSubmit);
+        loginEmail = findViewById(R.id.loginEmail);
+        loginPass = findViewById(R.id.loginPass);
+        loginSubmit = findViewById(R.id.loginSubmit);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -111,7 +111,7 @@ public class LoginScreen extends AppCompatActivity implements Serializable {
      * goes back to welcome screen for a back button on login screen
      */
     private void goToWelcome() {
-        Button loginBack = (Button) findViewById(R.id.loginBack);
+        Button loginBack = findViewById(R.id.loginBack);
         loginBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
