@@ -23,17 +23,17 @@ public class SearchDetailScreen extends AppCompatActivity {
         Item item = (Item) getIntent().getSerializableExtra("itemObj");
         Location location = (Location) getIntent().getSerializableExtra("locationObj");
 
-        TextView itemTimeStamp = (TextView) findViewById(R.id.itemTimeStamp);
+        TextView itemTimeStamp = findViewById(R.id.itemTimeStamp);
         itemTimeStamp.setText(item.getTimeStamp());
-        TextView itemSDesc = (TextView) findViewById(R.id.itemSDesc);
+        TextView itemSDesc = findViewById(R.id.itemSDesc);
         itemSDesc.setText(item.getShortDesc());
-        TextView itemLDesc = (TextView) findViewById(R.id.itemLDesc);
+        TextView itemLDesc = findViewById(R.id.itemLDesc);
         itemLDesc.setText(item.getLongDesc());
-        TextView itemVal = (TextView) findViewById(R.id.itemVal);
+        TextView itemVal = findViewById(R.id.itemVal);
         itemVal.setText("$ " + item.getValue());
-        TextView itemCat = (TextView) findViewById(R.id.itemCat);
+        TextView itemCat = findViewById(R.id.itemCat);
         itemCat.setText(item.getCategory());
-        TextView itemLoc = (TextView) findViewById(R.id.itemLoc);
+        TextView itemLoc = findViewById(R.id.itemLoc);
         itemLoc.setText("Location: " + location.getName());
     }
 

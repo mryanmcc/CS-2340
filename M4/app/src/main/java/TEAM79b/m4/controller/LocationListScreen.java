@@ -38,7 +38,7 @@ public class LocationListScreen extends AppCompatActivity {
         final Location[] keyListTemp = keys.toArray(new Location[keys.size()]);
         LocationContainer locContainer = LocationContainer.getInstance();
         final String[] keyList = locContainer.keyList();
-        listView = (ListView) findViewById(R.id.locListView);
+        listView = findViewById(R.id.locListView);
         adapter = new ArrayAdapter(LocationListScreen.this, android.R.layout.simple_list_item_1, keyList);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -60,7 +60,7 @@ public class LocationListScreen extends AppCompatActivity {
      * goes back to main app screen
      */
     private void goToApp() {
-        Button backToApp = (Button) findViewById(R.id.backToApp);
+        Button backToApp = findViewById(R.id.backToApp);
         backToApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
