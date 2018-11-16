@@ -39,14 +39,16 @@ public class LocationListScreen extends AppCompatActivity {
         LocationContainer locContainer = LocationContainer.getInstance();
         final String[] keyList = locContainer.keyList();
         listView = findViewById(R.id.locListView);
-        adapter = new ArrayAdapter(LocationListScreen.this, android.R.layout.simple_list_item_1, keyList);
+        adapter = new ArrayAdapter(LocationListScreen.this,
+                android.R.layout.simple_list_item_1, keyList);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String temp = keyList[position];
                 Location temp2 = keyListTemp[position];
-                Intent intent = new Intent(LocationListScreen.this, DetailScreen.class);
+                Intent intent = new Intent(LocationListScreen.this,
+                        DetailScreen.class);
                 intent.putExtra("key", temp);
                 intent.putExtra("locationObj", temp2);
                 startActivity(intent);

@@ -45,16 +45,18 @@ public class WelcomeScreen extends AppCompatActivity {
             mDatabase = FirebaseDatabase.getInstance().getReference();
             try {
                 InputStream locationStream = getResources().openRawResource(R.raw.locationdata);
-                BufferedReader locationStreamBuffer = new BufferedReader(new InputStreamReader(locationStream, StandardCharsets.UTF_8));
+                BufferedReader locationStreamBuffer = new BufferedReader(
+                        new InputStreamReader(locationStream, StandardCharsets.UTF_8));
 
                 String line;
                 locationStreamBuffer.readLine(); //get rid of header line
                 while ((line = locationStreamBuffer.readLine()) != null) {
                     Log.d("REGISTRATION_SCREEN", line);
                     String[] tokens = line.split(",");
-                    Location keyEntry = new Location(tokens[1], Float.parseFloat(tokens[2]), Float.parseFloat(tokens[3]), tokens[4], tokens[5], tokens[6], Integer.parseInt(tokens[7]), tokens[8], tokens[9], tokens[10]);
+                    Location keyEntry = new Location(tokens[1], Float.parseFloat(tokens[2]),
+                            Float.parseFloat(tokens[3]), tokens[4], tokens[5], tokens[6],
+                            Integer.parseInt(tokens[7]), tokens[8], tokens[9], tokens[10]);
                     ArrayList<Item> valueEntry = new ArrayList<>();
-                    Item tempItem = new Item("NOW", keyEntry, "ITEM_LIST", "Format of the ITEM_LIST", 0, "ITEM_LIST");
                     locContainer.addLocation(keyEntry, valueEntry);
                 }
                 locationStreamBuffer.close();
@@ -65,8 +67,10 @@ public class WelcomeScreen extends AppCompatActivity {
             for (Location l : locSet) {
                 mDatabase.child("locations").child(l.toString()).setValue(l);
                 List<Item> tempItemList = locContainer.getLocationMap().get(l);
-                tempItemList.add(new Item("NOW", l, "ITEM_LIST", "Format of the ITEM_LIST", 0, "ITEM_LIST"));
-                mDatabase.child("locations").child(l.toString()).child("item_list").setValue(tempItemList);
+                tempItemList.add(new Item("NOW", l, "ITEM_LIST",
+                        "Format of the ITEM_LIST", 0, "ITEM_LIST"));
+                mDatabase.child("locations").child(l.toString()).child("item_list")
+                        .setValue(tempItemList);
             }
         }
         goToLogin();

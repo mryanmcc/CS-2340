@@ -40,7 +40,8 @@ public class Location implements Serializable {
      * @param phoneNum phone number of location
      * @param url website of location
      */
-    public Location(String name, float latitude, float longitude, String address1, String city, String state, int zip, String type, String phoneNum, String url) {
+    public Location(String name, float latitude, float longitude, String address1, String city,
+                    String state, int zip, String type, String phoneNum, String url) {
         this.name = name;
         this.latitude = latitude;
         this.longitude = longitude;
@@ -133,30 +134,6 @@ public class Location implements Serializable {
         return url;
     }
 
-    /**
-     * setter for name of location
-     * @param name new location name
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * setter for state of location
-     * @param state new location state
-     */
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    /**
-     * setter for location type
-     * @param type new location type
-     */
-    public void setType(String type) {
-        this.type = type;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) {return true;}
@@ -177,7 +154,8 @@ public class Location implements Serializable {
     @Override
     public int hashCode() {
 
-        return Objects.hash(name, latitude, longitude, address1, city, state, zip, type, phoneNum, url);
+        return Objects.hash(name, latitude, longitude, address1, city, state, zip, type, phoneNum,
+                url);
     }
 
     @Override

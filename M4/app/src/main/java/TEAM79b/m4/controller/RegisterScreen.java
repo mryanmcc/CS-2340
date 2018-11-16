@@ -46,12 +46,8 @@ public class RegisterScreen extends AppCompatActivity {
     private Button regSubmit;
     private Spinner roleSpinner;
 
-    private User user;
-
     private FirebaseAuth firebaseAuth;
     private DatabaseReference mDatabase;
-
-    private final Activity a = this;
 
 
     @Override
@@ -64,7 +60,8 @@ public class RegisterScreen extends AppCompatActivity {
         regSubmit = findViewById(R.id.regSubmit);
         roleSpinner = findViewById(R.id.roleSpinner);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item, User.rolesList);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_item, User.rolesList);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         roleSpinner.setAdapter(adapter);
 
@@ -91,7 +88,8 @@ public class RegisterScreen extends AppCompatActivity {
      * @param view screen
      */
     public void regPress(View view) {
-        firebaseAuth.createUserWithEmailAndPassword(regEmail.getText().toString(), regPass.getText().toString())
+        firebaseAuth.createUserWithEmailAndPassword(regEmail.getText().toString(), regPass.
+                getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -101,21 +99,28 @@ public class RegisterScreen extends AppCompatActivity {
                             mDatabase = FirebaseDatabase.getInstance().getReference();
                             String[] userIDarr = regEmail.getText().toString().split("\\.");
                             mDatabase.child("users").child(userIDarr[0]).setValue(user);
-                            mDatabase.child("users").child(userIDarr[0]).child("role").setValue(roleSpinner.getSelectedItem().toString());
+                            mDatabase.child("users").child(userIDarr[0]).child("role")
+                                    .setValue(roleSpinner.getSelectedItem().toString());
 
 
                             try {
-                                InputStream locationStream = getResources().openRawResource(R.raw.locationdata);
-                                BufferedReader locationStreamBuffer = new BufferedReader(new InputStreamReader(locationStream, StandardCharsets.UTF_8));
+                                InputStream locationStream = getResources()
+                                        .openRawResource(R.raw.locationdata);
+                                BufferedReader locationStreamBuffer =
+                                        new BufferedReader(new InputStreamReader(locationStream,
+                                                StandardCharsets.UTF_8));
 
                                 String line;
                                 locationStreamBuffer.readLine();
                                 while ((line = locationStreamBuffer.readLine()) != null) {
                                     Log.d("REGISTRATION_SCREEN", line);
                                     String[] tokens = line.split(",");
-                                    Location keyEntry = new Location(tokens[1], Float.parseFloat(tokens[2]), Float.parseFloat(tokens[3]), tokens[4], tokens[5], tokens[6], Integer.parseInt(tokens[7]), tokens[8], tokens[9], tokens[10]);
+                                    Location keyEntry = new Location(tokens[1],
+                                            Float.parseFloat(tokens[2]),
+                                            Float.parseFloat(tokens[3]), tokens[4], tokens[5],
+                                            tokens[6], Integer.parseInt(tokens[7]), tokens[8],
+                                            tokens[9], tokens[10]);
                                     ArrayList<Item> valueEntry = new ArrayList<>();
-                                    Item tempItem = new Item("NOW",keyEntry, "ITEM_LIST","Format of the ITEM_LIST", 0, "ITEM_LIST");
                                     locContainer.addLocation(keyEntry, valueEntry);
                                 }
                                 locationStreamBuffer.close();
@@ -127,15 +132,22 @@ public class RegisterScreen extends AppCompatActivity {
                             userID = userIDArr[0];
                             Set<Location> locSet = locContainer.getLocationMap().keySet();
                             for (Location l : locSet) {
-                                mDatabase.child("users").child(userID).child("locations").child(l.toString()).setValue(l);
+                                mDatabase.child("users").child(userID).child("locations")
+                                        .child(l.toString()).setValue(l);
                                 List<Item> tempItemList = locContainer.getLocationMap().get(l);
-                                tempItemList.add(new Item("NOW",l, "ITEM_LIST","Format of the ITEM_LIST", 0, "ITEM_LIST"));
-                                mDatabase.child("users").child(userID).child("locations").child(l.toString()).child("item_list").setValue(tempItemList);
+                                tempItemList.add(new Item("NOW",l, "ITEM_LIST",
+                                        "Format of the ITEM_LIST", 0,
+                                        "ITEM_LIST"));
+                                mDatabase.child("users").child(userID).child("locations")
+                                        .child(l.toString()).child("item_list")
+                                        .setValue(tempItemList);
                             }
 
-                            startActivity(new Intent(RegisterScreen.this, LoginScreen.class));
+                            startActivity(new Intent(RegisterScreen.this,
+                                    LoginScreen.class));
                         } else {
-                            Toast.makeText(RegisterScreen.this, "Authentication failed.",
+                            Toast.makeText(RegisterScreen.this,
+                                    "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }

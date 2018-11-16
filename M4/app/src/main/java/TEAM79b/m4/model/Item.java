@@ -30,7 +30,8 @@ public class Item implements Serializable {
      * @param value cost of item
      * @param category category of item
      */
-    public Item(String timeStamp, Location location, String shortDesc, String longDesc, float value, String category) {
+    public Item(String timeStamp, Location location, String shortDesc, String longDesc, float value,
+                String category) {
         this.timeStamp = timeStamp;
         this.location = location;
         this.shortDesc = shortDesc;

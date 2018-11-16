@@ -46,7 +46,8 @@ public class SearchScreen extends AppCompatActivity {
 
         locSpinner = findViewById(R.id.locSpinner);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, keyList);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_item, keyList);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         locSpinner.setAdapter(adapter);
     }

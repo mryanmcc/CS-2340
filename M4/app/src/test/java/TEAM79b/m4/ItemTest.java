@@ -13,10 +13,15 @@ import static org.junit.Assert.*;
 public class ItemTest {
 
     //Michael McCorkle M10
-    private Location tempLoc = new Location("Foobar", 23.2f, 23.5f, "Place", "Aplace", "PL", 1, "A place", "1", "place.place");
-    private Item tempItem = new Item("1:00", tempLoc, "thing", "a thing", 3, "Foo");
-    private Item tempItem2 = new Item("2:00", tempLoc, "it", "a bit", 4, "Bar");
-    private Item tempItem3 = new Item("3:00", tempLoc, "part", "some part", 5, "End");
+    private Location tempLoc = new Location("Foobar", 23.2f, 23.5f,
+            "Place", "Aplace", "PL", 1, "A place", "1",
+            "place.place");
+    private Item tempItem = new Item("1:00", tempLoc, "thing",
+            "a thing", 3, "Foo");
+    private Item tempItem2 = new Item("2:00", tempLoc, "it", "a bit",
+            4, "Bar");
+    private Item tempItem3 = new Item("3:00", tempLoc, "part",
+            "some part", 5, "End");
 
     /**
      * time stamp test
@@ -83,9 +88,12 @@ public class ItemTest {
      */
     @Test
     public void testEquals() {
-        Item fooItem = new Item("1:00", tempLoc, "thing", "a thing", 3, "Foo");
-        Item fooItem2 = new Item("2:00", tempLoc, "it", "a bit", 4, "Bar");
-        Item fooItem3 = new Item("3:00", tempLoc, "part", "some part", 5, "End");
+        Item fooItem = new Item("1:00", tempLoc, "thing", "a thing",
+                3, "Foo");
+        Item fooItem2 = new Item("2:00", tempLoc, "it", "a bit",
+                4, "Bar");
+        Item fooItem3 = new Item("3:00", tempLoc, "part", "some part",
+                5, "End");
         assertTrue(tempItem.equals(fooItem));
         assertTrue(tempItem2.equals(fooItem2));
         assertTrue(tempItem3.equals(fooItem3));

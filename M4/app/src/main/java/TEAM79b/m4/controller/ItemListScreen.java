@@ -27,7 +27,6 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
     private ListView listView;
     private ArrayAdapter adapter;
     LocationContainer locContainer = LocationContainer.getInstance();
-    private List<Item> values;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +36,6 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
 
         Location location = (Location) getIntent().getSerializableExtra("locationObj");
         Log.d("HELPOUTm", Integer.toString(locContainer.getLocationMap().size()));
-        ArrayList<Item> valueEntry = new ArrayList<>();
         values = locContainer.getLocationMap().get(location);
         Log.d("chica", locContainer.getLocationMap().toString());
         final String[] itemValues = new String[values.size()];
@@ -45,7 +43,8 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
             itemValues[i] = values.get(i).getShortDesc();
         }
         listView = findViewById(R.id.itemListView);
-        adapter = new ArrayAdapter(ItemListScreen.this, android.R.layout.simple_list_item_1, itemValues);
+        adapter = new ArrayAdapter(ItemListScreen.this,
+                android.R.layout.simple_list_item_1, itemValues);
         listView.setAdapter(adapter);
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override

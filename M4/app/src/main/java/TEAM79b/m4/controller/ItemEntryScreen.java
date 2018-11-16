@@ -56,16 +56,19 @@ public class ItemEntryScreen extends AppCompatActivity implements Serializable {
         LocationContainer locContainer = LocationContainer.getInstance();
         Location location = (Location) getIntent().getSerializableExtra("locationObj");
         Item item = new Item(itemTime.getText().toString(), location, itemSDesc.getText().toString()
-                , itemLDesc.getText().toString(), Float.parseFloat(itemVal.getText().toString()), itemCat.getText().toString());
+                , itemLDesc.getText().toString(), Float.parseFloat(itemVal.getText().toString()),
+                itemCat.getText().toString());
         locContainer.getLocationMap().get(location).add(item);
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         mDatabase = FirebaseDatabase.getInstance().getReference();
         String userID = user.getEmail();
         String[] userIDArr = userID.split("\\.");
         userID = userIDArr[0];
-        mDatabase.child("users").child(userID).child("locations").child(location.toString()).setValue(location);
+        mDatabase.child("users").child(userID).child("locations").child(location.toString())
+                .setValue(location);
         List<Item> tempItemList = locContainer.getLocationMap().get(location);
-        mDatabase.child("users").child(userID).child("locations").child(location.toString()).child("item_list").setValue(tempItemList);
+        mDatabase.child("users").child(userID).child("locations").child(location.toString())
+                .child("item_list").setValue(tempItemList);
         Intent intent = new Intent(ItemEntryScreen.this, ItemListScreen.class);
         intent.putExtra("locationObj", location);
         startActivity(intent);
@@ -79,8 +82,10 @@ public class ItemEntryScreen extends AppCompatActivity implements Serializable {
         goItemList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Location location = (Location)  getIntent().getSerializableExtra("locationObj");
-                Intent intent = new Intent(ItemEntryScreen.this, ItemListScreen.class);
+                Location location = (Location)  getIntent()
+                        .getSerializableExtra("locationObj");
+                Intent intent =
+                        new Intent(ItemEntryScreen.this, ItemListScreen.class);
                 intent.putExtra("locationObj", location);
                 startActivity(intent);
             }
