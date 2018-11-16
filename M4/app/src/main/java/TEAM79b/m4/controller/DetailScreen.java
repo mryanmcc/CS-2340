@@ -53,7 +53,6 @@ public class DetailScreen extends AppCompatActivity implements Serializable {
         TextView detailWeb = (TextView) findViewById(R.id.detailWeb);
         detailWeb.setText(location.getUrl());
 
-        
         goToList();
         goToItemList();
     }
