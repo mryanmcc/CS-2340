@@ -45,7 +45,8 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
             itemValues[i] = values.get(i).getShortDesc();
         }
         listView = findViewById(R.id.itemListView);
-        adapter = new ArrayAdapter(ItemListScreen.this, android.R.layout.simple_list_item_1, itemValues);
+        adapter = new ArrayAdapter(ItemListScreen.this,
+                android.R.layout.simple_list_item_1, itemValues);
         listView.setAdapter(adapter);
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override

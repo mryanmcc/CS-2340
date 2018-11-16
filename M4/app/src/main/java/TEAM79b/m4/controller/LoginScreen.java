@@ -61,7 +61,8 @@ public class LoginScreen extends AppCompatActivity implements Serializable {
      * @param view screen
      */
     public void loginPress(View view) {
-        firebaseAuth.signInWithEmailAndPassword(loginEmail.getText().toString(), loginPass.getText().toString())
+        firebaseAuth.signInWithEmailAndPassword(loginEmail.getText().toString(),
+                loginPass.getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -78,23 +79,31 @@ public class LoginScreen extends AppCompatActivity implements Serializable {
                                     .addListenerForSingleValueEvent(new ValueEventListener() {
                                         @Override
                                         public void onDataChange(DataSnapshot dataSnapshot) {
-                                         LocationContainer locContainer = LocationContainer.getInstance();
-                                            for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                                                GenericTypeIndicator<List<Item>> t = new GenericTypeIndicator<List<Item>>() {};
+                                         LocationContainer locContainer = LocationContainer
+                                                 .getInstance();
+                                            for (DataSnapshot snapshot : dataSnapshot
+                                                    .getChildren()) {
+                                                GenericTypeIndicator<List<Item>> t =
+                                                        new GenericTypeIndicator<List<Item>>() {};
                                                 Location loc = snapshot.getValue(Location.class);
-                                                List<Item> itemList = snapshot.child("item_list").getValue(t);
+                                                List<Item> itemList = snapshot.child("item_list")
+                                                        .getValue(t);
                                                 locContainer.addLocation(loc, itemList);
                                                 Log.d("HOLAs", itemList.toString());
                                             }
-                                            Log.d("HOLAs", Integer.toString(locContainer.getLocationMap().size()));
-                                            Log.d("HOLAs", locContainer.getLocationMap().toString());
-                                            Log.d("BRUHs", Integer.toString(locContainer.getLocationMap().size()));
+                                            Log.d("HOLAs", Integer.toString(locContainer
+                                                    .getLocationMap().size()));
+                                            Log.d("HOLAs", locContainer.getLocationMap()
+                                                    .toString());
+                                            Log.d("BRUHs", Integer.toString(locContainer
+                                                    .getLocationMap().size()));
                                         }
 
                                         @Override
-                                        public void onCancelled(DatabaseError databaseError) {/*Do Nothing*/}
+                                        public void onCancelled(DatabaseError databaseError) {}
                                     });
-                            Intent intent = new Intent(LoginScreen.this, AppScreen.class);
+                            Intent intent = new Intent(LoginScreen.this,
+                                    AppScreen.class);
                             intent.putExtra("user", user);
                             startActivity(intent);
                         } else {

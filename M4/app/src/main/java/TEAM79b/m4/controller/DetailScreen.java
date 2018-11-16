@@ -42,7 +42,8 @@ public class DetailScreen extends AppCompatActivity implements Serializable {
         TextView detailAdd1 = findViewById(R.id.detailAdd1);
         detailAdd1.setText(location.getAddress1());
         TextView detailAdd2 = findViewById(R.id.detailAdd2);
-        detailAdd2.setText(location.getCity() + ", " + location.getState() + " " + location.getZip());
+        detailAdd2.setText(location.getCity() + ", " + location.getState() + " "
+                + location.getZip());
         TextView detailType = findViewById(R.id.detailType);
         detailType.setText(location.getType());
         TextView detailPhone = findViewById(R.id.detailPhone);

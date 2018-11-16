@@ -71,14 +71,16 @@ public class SearchListScreen extends AppCompatActivity {
         }
         
         listView = findViewById(R.id.searchListView);
-        adapter = new ArrayAdapter(SearchListScreen.this, android.R.layout.simple_list_item_1, itemValues);
+        adapter = new ArrayAdapter(SearchListScreen.this,
+                android.R.layout.simple_list_item_1, itemValues);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Location location = newValues.get(position).getLocation();
                 Item tempValues = newValues.get(position);
-                Intent intent = new Intent(SearchListScreen.this, SearchDetailScreen.class);
+                Intent intent = new Intent(SearchListScreen.this,
+                        SearchDetailScreen.class);
                 intent.putExtra("itemObj", tempValues);
                 intent.putExtra("locationObj", location);
                 intent.putExtra("locationName", locationName);

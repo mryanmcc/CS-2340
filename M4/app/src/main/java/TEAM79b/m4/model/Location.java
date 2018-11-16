@@ -40,7 +40,8 @@ public class Location implements Serializable {
      * @param phoneNum phone number of location
      * @param url website of location
      */
-    public Location(String name, float latitude, float longitude, String address1, String city, String state, int zip, String type, String phoneNum, String url) {
+    public Location(String name, float latitude, float longitude, String address1, String city,
+                    String state, int zip, String type, String phoneNum, String url) {
         this.name = name;
         this.latitude = latitude;
         this.longitude = longitude;
@@ -177,7 +178,8 @@ public class Location implements Serializable {
     @Override
     public int hashCode() {
 
-        return Objects.hash(name, latitude, longitude, address1, city, state, zip, type, phoneNum, url);
+        return Objects.hash(name, latitude, longitude, address1, city, state, zip, type, phoneNum,
+                url);
     }
 
     @Override
