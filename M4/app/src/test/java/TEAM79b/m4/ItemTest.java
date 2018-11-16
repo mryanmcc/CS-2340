@@ -28,9 +28,9 @@ public class ItemTest {
      */
     @Test
     public void testGetTimeStamp() {
-        assertTrue(tempItem.getTimeStamp().equals("1:00"));
-        assertTrue(tempItem.getTimeStamp().equals("2:00"));
-        assertTrue(tempItem.getTimeStamp().equals("3:00"));
+        assertTrue("1:00".equals(tempItem.getTimeStamp()));
+        assertTrue("2:00".equals(tempItem.getTimeStamp()));
+        assertTrue("3:00".equals(tempItem.getTimeStamp()));
     }
 
     /**
@@ -48,9 +48,9 @@ public class ItemTest {
      */
     @Test
     public void testGetShortDesc() {
-        assertTrue(tempItem.getShortDesc().equals("thing"));
-        assertTrue(tempItem2.getShortDesc().equals("it"));
-        assertTrue(tempItem3.getShortDesc().equals("part"));
+        assertTrue("thing".equals(tempItem.getShortDesc()));
+        assertTrue("it".equals(tempItem2.getShortDesc()));
+        assertTrue("part".equals(tempItem3.getShortDesc()));
     }
 
     /**
@@ -58,9 +58,9 @@ public class ItemTest {
      */
     @Test
     public void testGetLongDesc() {
-        assertTrue(tempItem.getLongDesc().equals("a thing"));
-        assertTrue(tempItem2.getLongDesc().equals("a bit"));
-        assertTrue(tempItem3.getLongDesc().equals("some part"));
+        assertTrue("a thing".equals(tempItem.getLongDesc()));
+        assertTrue("a bit".equals(tempItem2.getLongDesc()));
+        assertTrue("some part".equals(tempItem3.getLongDesc()));
     }
 
     /**
@@ -78,9 +78,9 @@ public class ItemTest {
      */
     @Test
     public void testGetCategory() {
-        assertTrue(tempItem.getCategory().equals("Foo"));
-        assertTrue(tempItem2.getCategory().equals("Bar"));
-        assertTrue(tempItem3.getCategory().equals("End"));
+        assertTrue("Foo".equals(tempItem.getCategory()));
+        assertTrue("Bar".equals(tempItem2.getCategory()));
+        assertTrue("End".equals(tempItem3.getCategory()));
     }
 
     /**
@@ -114,8 +114,8 @@ public class ItemTest {
      */
     @Test
     public void testToString() {
-        assertTrue(tempItem.toString().equals("Item{shortDesc='thing'}"));
-        assertTrue(tempItem2.toString().equals("Item{shortDesc='it'}"));
-        assertTrue(tempItem3.toString().equals("Item{shortDesc='part'}"));
+        assertTrue("Item{shortDesc='thing'}".equals(tempItem.toString()));
+        assertTrue("Item{shortDesc='it'}".equals(tempItem2.toString()));
+        assertTrue("Item{shortDesc='part'}".equals(tempItem3.toString()));
     }
 }
