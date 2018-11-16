@@ -42,7 +42,6 @@ public class LocationContainerTest {
         test2.addLocation(tempLoc, new ArrayList<Item>());
         test2.addLocation(tempLoc2, new ArrayList<Item>());
         test2.addLocation(tempLoc3, new ArrayList<Item>());
-        String[] keyListManual = new String[3];
         Set<String> keySetManual = new HashSet<>();
         for (Location l : test2.getLocationMap().keySet()) {
             if (l != null) {

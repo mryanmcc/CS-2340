@@ -46,12 +46,8 @@ public class RegisterScreen extends AppCompatActivity {
     private Button regSubmit;
     private Spinner roleSpinner;
 
-    private User user;
-
     private FirebaseAuth firebaseAuth;
     private DatabaseReference mDatabase;
-
-    private final Activity a = this;
 
 
     @Override
@@ -125,10 +121,6 @@ public class RegisterScreen extends AppCompatActivity {
                                             tokens[6], Integer.parseInt(tokens[7]), tokens[8],
                                             tokens[9], tokens[10]);
                                     ArrayList<Item> valueEntry = new ArrayList<>();
-                                    Item tempItem = new Item("NOW",keyEntry,
-                                            "ITEM_LIST",
-                                            "Format of the ITEM_LIST", 0,
-                                            "ITEM_LIST");
                                     locContainer.addLocation(keyEntry, valueEntry);
                                 }
                                 locationStreamBuffer.close();

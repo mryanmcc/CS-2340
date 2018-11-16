@@ -134,30 +134,6 @@ public class Location implements Serializable {
         return url;
     }
 
-    /**
-     * setter for name of location
-     * @param name new location name
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * setter for state of location
-     * @param state new location state
-     */
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    /**
-     * setter for location type
-     * @param type new location type
-     */
-    public void setType(String type) {
-        this.type = type;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) {return true;}

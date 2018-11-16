@@ -57,8 +57,6 @@ public class WelcomeScreen extends AppCompatActivity {
                             Float.parseFloat(tokens[3]), tokens[4], tokens[5], tokens[6],
                             Integer.parseInt(tokens[7]), tokens[8], tokens[9], tokens[10]);
                     ArrayList<Item> valueEntry = new ArrayList<>();
-                    Item tempItem = new Item("NOW", keyEntry, "ITEM_LIST",
-                            "Format of the ITEM_LIST", 0, "ITEM_LIST");
                     locContainer.addLocation(keyEntry, valueEntry);
                 }
                 locationStreamBuffer.close();
