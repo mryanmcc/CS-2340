@@ -33,11 +33,13 @@ public class ItemDetailScreen extends AppCompatActivity implements Serializable 
         TextView itemLDesc = (TextView) findViewById(R.id.itemLDesc);
         itemLDesc.setText(item.getLongDesc());
         TextView itemVal = (TextView) findViewById(R.id.itemVal);
-        itemVal.setText("$ " + item.getValue());
+        String iVal = "$ " + item.getValue();
+        itemVal.setText(iVal);
         TextView itemCat = (TextView) findViewById(R.id.itemCat);
         itemCat.setText(item.getCategory());
         TextView itemLoc = (TextView) findViewById(R.id.itemLoc);
-        itemLoc.setText("Location: " + location.getName());
+        String iLoc = "Location: " + location.getName();
+        itemLoc.setText(iLoc);
 
         goToItemList();
     }
