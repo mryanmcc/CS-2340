@@ -26,18 +26,20 @@ public class ItemDetailScreen extends AppCompatActivity implements Serializable 
         Item item = (Item) getIntent().getSerializableExtra("itemObj");
         Location location = (Location) getIntent().getSerializableExtra("locationObj");
 
-        TextView itemTimeStamp = findViewById(R.id.itemTimeStamp);
+        TextView itemTimeStamp = (TextView) findViewById(R.id.itemTimeStamp);
         itemTimeStamp.setText(item.getTimeStamp());
-        TextView itemSDesc = findViewById(R.id.itemSDesc);
+        TextView itemSDesc = (TextView) findViewById(R.id.itemSDesc);
         itemSDesc.setText(item.getShortDesc());
-        TextView itemLDesc = findViewById(R.id.itemLDesc);
+        TextView itemLDesc = (TextView) findViewById(R.id.itemLDesc);
         itemLDesc.setText(item.getLongDesc());
-        TextView itemVal = findViewById(R.id.itemVal);
-        itemVal.setText("$ " + item.getValue());
-        TextView itemCat = findViewById(R.id.itemCat);
+        TextView itemVal = (TextView) findViewById(R.id.itemVal);
+        String iVal = "$ " + item.getValue();
+        itemVal.setText(iVal);
+        TextView itemCat = (TextView) findViewById(R.id.itemCat);
         itemCat.setText(item.getCategory());
-        TextView itemLoc = findViewById(R.id.itemLoc);
-        itemLoc.setText("Location: " + location.getName());
+        TextView itemLoc = (TextView) findViewById(R.id.itemLoc);
+        String iLoc = "Location: " + location.getName();
+        itemLoc.setText(iLoc);
 
         goToItemList();
     }
@@ -46,7 +48,7 @@ public class ItemDetailScreen extends AppCompatActivity implements Serializable 
      * goes back to the item list screen
      */
     private void goToItemList() {
-        Button backToItemList = findViewById(R.id.backToItemList);
+        Button backToItemList = (Button) findViewById(R.id.backToItemList);
         backToItemList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

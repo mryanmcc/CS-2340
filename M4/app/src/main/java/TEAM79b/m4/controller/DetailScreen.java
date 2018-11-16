@@ -30,22 +30,26 @@ public class DetailScreen extends AppCompatActivity implements Serializable {
 
         Location location = (Location) getIntent().getSerializableExtra("locationObj");
 
-        TextView detailName = findViewById(R.id.detailName);
+        TextView detailName = (TextView) findViewById(R.id.detailName);
         detailName.setText(key);
-        TextView detailLat = findViewById(R.id.detailLat);
-        detailLat.setText("Latitude: " + location.getLatitude());
-        TextView detailLon = findViewById(R.id.detailLon);
-        detailLon.setText("Longitude: " + location.getLongitude());
-        TextView detailAdd1 = findViewById(R.id.detailAdd1);
+        TextView detailLat = (TextView) findViewById(R.id.detailLat);
+        String dLat = "Latitude: " + location.getLatitude();
+        detailLat.setText(dLat);
+        TextView detailLon = (TextView) findViewById(R.id.detailLon);
+        String dLon = "Longitude: " + location.getLongitude();
+        detailLon.setText(dLon);
+        TextView detailAdd1 = (TextView) findViewById(R.id.detailAdd1);
         detailAdd1.setText(location.getAddress1());
         TextView detailAdd2 = findViewById(R.id.detailAdd2);
         detailAdd2.setText(location.getCity() + ", " + location.getState() + " "
                 + location.getZip());
         TextView detailType = findViewById(R.id.detailType);
+        String address2 = location.getCity() + ", " + location.getState() + " " + location.getZip();
+        detailAdd2.setText(address2);
         detailType.setText(location.getType());
-        TextView detailPhone = findViewById(R.id.detailPhone);
+        TextView detailPhone = (TextView) findViewById(R.id.detailPhone);
         detailPhone.setText(location.getPhoneNum());
-        TextView detailWeb = findViewById(R.id.detailWeb);
+        TextView detailWeb = (TextView) findViewById(R.id.detailWeb);
         detailWeb.setText(location.getUrl());
 
         goToList();
@@ -56,7 +60,7 @@ public class DetailScreen extends AppCompatActivity implements Serializable {
      * goes back to the list of locations
      */
     private void goToList() {
-        Button backToList = findViewById(R.id.backToList);
+        Button backToList = (Button) findViewById(R.id.backToList);
         backToList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,7 +74,7 @@ public class DetailScreen extends AppCompatActivity implements Serializable {
      */
     private void goToItemList() {
         final Location location = (Location) getIntent().getSerializableExtra("locationObj");
-        Button goItemList = findViewById(R.id.goItemList);
+        Button goItemList = (Button) findViewById(R.id.goItemList);
         goItemList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
