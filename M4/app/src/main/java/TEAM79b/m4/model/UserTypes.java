@@ -11,7 +11,7 @@ public enum UserTypes {
 
     /**
      * constructor for user types
-     * @param role
+     * @param role role of user
      */
     private UserTypes(String role) {
         this.role = role;
@@ -19,7 +19,7 @@ public enum UserTypes {
 
     /**
      * role of user types for readability
-     * @return
+     * @return role of user
      */
     public String getRole() {
         return role;

@@ -60,7 +60,6 @@ public class ItemEntryScreen extends AppCompatActivity implements Serializable {
         locContainer.getLocationMap().get(location).add(item);
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        Log.d("blah", user.getEmail());
         String userID = user.getEmail();
         String[] userIDArr = userID.split("\\.");
         userID = userIDArr[0];

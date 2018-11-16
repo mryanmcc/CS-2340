@@ -92,7 +92,7 @@ public class SearchListScreen extends AppCompatActivity {
 
     /**
      * goes back to the search screen
-     * @param view
+     * @param view screen
      */
     public void backToSearch(View view) {
         startActivity(new Intent(SearchListScreen.this, SearchScreen.class));
