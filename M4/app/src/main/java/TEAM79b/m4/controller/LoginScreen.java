@@ -111,7 +111,7 @@ public class LoginScreen extends AppCompatActivity implements Serializable {
      * goes back to welcome screen for a back button on login screen
      */
     private void goToWelcome() {
-        Button loginBack = (Button) findViewById(R.id.loginBack);
+        Button loginBack = findViewById(R.id.loginBack);
         loginBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
