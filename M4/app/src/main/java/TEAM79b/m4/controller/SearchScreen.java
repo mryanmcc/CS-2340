@@ -18,6 +18,9 @@ import TEAM79b.m4.model.Location;
 import TEAM79b.m4.model.LocationContainer;
 import TEAM79b.m4.model.User;
 
+/**
+ * screen for users to search for items
+ */
 public class SearchScreen extends AppCompatActivity {
 
     private Spinner locSpinner;
@@ -49,6 +52,10 @@ public class SearchScreen extends AppCompatActivity {
         locSpinner.setAdapter(adapter);
     }
 
+    /**
+     * allows users to search for an item or by category
+     * @param view screen
+     */
     public void searchItem(View view) {
         String location = locSpinner.getSelectedItem().toString();
         String itemName = itemEntry.getText().toString();
@@ -59,6 +66,10 @@ public class SearchScreen extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     * button allows for search by category
+     * @param view screen
+     */
     public void searchCat(View view) {
         String location = locSpinner.getSelectedItem().toString();
         String catName = catEntry.getText().toString();
@@ -69,6 +80,10 @@ public class SearchScreen extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     * goes back to the app screen
+     * @param view screen
+     */
     public void goToApp(View view) {
         startActivity(new Intent(SearchScreen.this, AppScreen.class));
     }

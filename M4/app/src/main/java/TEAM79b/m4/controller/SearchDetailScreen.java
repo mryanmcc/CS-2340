@@ -10,6 +10,9 @@ import TEAM79b.m4.R;
 import TEAM79b.m4.model.Item;
 import TEAM79b.m4.model.Location;
 
+/**
+ * screen generated after an item search
+ */
 public class SearchDetailScreen extends AppCompatActivity {
 
     @Override
@@ -34,6 +37,10 @@ public class SearchDetailScreen extends AppCompatActivity {
         itemLoc.setText("Location: " + location.getName());
     }
 
+    /**
+     * goes back to the screen to search for items
+     * @param view screen
+     */
     public void backToList(View view) {
         String locationName = getIntent().getStringExtra("locationName");
         String itemName = getIntent().getStringExtra("itemName");

@@ -27,6 +27,9 @@ import TEAM79b.m4.model.Location;
 import TEAM79b.m4.model.LocationContainer;
 import TEAM79b.m4.model.User;
 
+/**
+ * screen that allows the user to add a new item to a location
+ */
 public class ItemEntryScreen extends AppCompatActivity implements Serializable {
 
     private EditText itemSDesc;
@@ -51,6 +54,10 @@ public class ItemEntryScreen extends AppCompatActivity implements Serializable {
         goToItemList();
     }
 
+    /**
+     * adds new item to a location
+     * @param view screen passed in
+     */
     public void addNewItem(View view) {
         LocationContainer locContainer = LocationContainer.getInstance();
         //HashMap<Location, List<Item>> locations = locContainer.getLocationMap();
@@ -74,6 +81,9 @@ public class ItemEntryScreen extends AppCompatActivity implements Serializable {
         startActivity(intent);
     }
 
+    /**
+     * goes to item list screen
+     */
     private void goToItemList() {
         Button goItemList = (Button) findViewById(R.id.goItemList);
         goItemList.setOnClickListener(new View.OnClickListener() {

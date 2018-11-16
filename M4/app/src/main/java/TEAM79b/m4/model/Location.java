@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Location object type that holds necessary location info
+ */
 public class Location implements Serializable {
     private String name;
     private float latitude;
@@ -17,10 +20,26 @@ public class Location implements Serializable {
     private String url;
     private List<Item> itemList;
 
+    /**
+     * no arg constructor for firebase
+     */
     public Location() {
 
     }
 
+    /**
+     * constructor to create a Location with proper attributes
+     * @param name name of location
+     * @param latitude latitude of location
+     * @param longitude longitude of location
+     * @param address1 address of location
+     * @param city city of location
+     * @param state state of location
+     * @param zip zip of location
+     * @param type type of location (donation, etc.)
+     * @param phoneNum phone number of location
+     * @param url website of location
+     */
     public Location(String name, float latitude, float longitude, String address1, String city, String state, int zip, String type, String phoneNum, String url) {
         this.name = name;
         this.latitude = latitude;
@@ -34,92 +53,108 @@ public class Location implements Serializable {
         this.url = url;
     }
 
+    /**
+     * getter for name
+     * @return name of location
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * getter for latitude
+     * @return latitude of location
+     */
     public float getLatitude() {
         return latitude;
     }
 
+    /**
+     * getter for longitude
+     * @return longitude of location
+     */
     public float getLongitude() {
         return longitude;
     }
 
+    /**
+     * getter for address
+     * @return address of location
+     */
     public String getAddress1() {
         return address1;
     }
 
+    /**
+     * getter for city of location
+     * @return city of location
+     */
     public String getCity() {
         return city;
     }
 
+    /**
+     * getter for state of location
+     * @return state of location
+     */
     public String getState() {
         return state;
     }
 
+    /**
+     * getter for zip of location
+     * @return zip of location
+     */
     public int getZip() {
         return zip;
     }
 
+    /**
+     * getter for location type
+     * @return type of location
+     */
     public String getType() {
         return type;
     }
 
+    /**
+     * getter for phone number
+     * @return phone number for location
+     */
     public String getPhoneNum() {
         return phoneNum;
     }
 
+    /**
+     * getter for location url
+     * @return website of location
+     */
     public String getUrl() {
         return url;
     }
 
+    /**
+     * setter for name of location
+     * @param name new location name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setLatitude(float latitude) {
-        this.latitude = latitude;
-    }
-
-    public void setLongitude(float longtitude) {
-        this.longitude = longtitude;
-    }
-
-    public void setAddress1(String address1) {
-        this.address1 = address1;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
+    /**
+     * setter for state of location
+     * @param state new location state
+     */
     public void setState(String state) {
         this.state = state;
     }
 
-    public void setZip(int zip) {
-        this.zip = zip;
-    }
-
+    /**
+     * setter for location type
+     * @param type new location type
+     */
     public void setType(String type) {
         this.type = type;
-    }
-
-    public void setPhoneNum(String phoneNum) {
-        this.phoneNum = phoneNum;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public List<Item> getItemList() {
-        return itemList;
-    }
-
-    public void setItemList(List<Item> itemList) {
-        this.itemList = itemList;
     }
 
     @Override

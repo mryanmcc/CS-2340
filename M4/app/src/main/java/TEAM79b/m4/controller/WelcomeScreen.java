@@ -28,6 +28,9 @@ import TEAM79b.m4.model.Item;
 import TEAM79b.m4.model.Location;
 import TEAM79b.m4.model.LocationContainer;
 
+/**
+ * welcome screen when users first open the app
+ */
 public class WelcomeScreen extends AppCompatActivity {
 
     private DatabaseReference mDatabase;
@@ -79,6 +82,9 @@ public class WelcomeScreen extends AppCompatActivity {
         goToRegister();
     }
 
+    /**
+     * takes users to the login screen
+     */
     private void goToLogin() {
         Button goLogin = (Button) findViewById(R.id.goLogin);
         goLogin.setOnClickListener(new View.OnClickListener() {
@@ -89,6 +95,9 @@ public class WelcomeScreen extends AppCompatActivity {
         });
     }
 
+    /**
+     * takes users to the registration screen
+     */
     private void goToRegister() {
         Button goRegister = (Button) findViewById(R.id.goRegister);
         goRegister.setOnClickListener(new View.OnClickListener() {

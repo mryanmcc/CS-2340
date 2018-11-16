@@ -14,6 +14,9 @@ import TEAM79b.m4.R;
 import TEAM79b.m4.model.Location;
 import TEAM79b.m4.model.LocationContainer;
 
+/**
+ * location detail screen
+ */
 public class DetailScreen extends AppCompatActivity implements Serializable {
 
 //    private LocationContainer locContainer = LocationContainer.getInstance();
@@ -59,6 +62,9 @@ public class DetailScreen extends AppCompatActivity implements Serializable {
         goToItemList();
     }
 
+    /**
+     * goes back to the list of locations
+     */
     private void goToList() {
         Button backToList = (Button) findViewById(R.id.backToList);
         backToList.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +75,9 @@ public class DetailScreen extends AppCompatActivity implements Serializable {
         });
     }
 
+    /**
+     * goes to the list of items
+     */
     private void goToItemList() {
         final Location location = (Location) getIntent().getSerializableExtra("locationObj");
         Button goItemList = (Button) findViewById(R.id.goItemList);

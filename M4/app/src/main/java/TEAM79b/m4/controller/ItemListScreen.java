@@ -19,6 +19,9 @@ import TEAM79b.m4.model.Item;
 import TEAM79b.m4.model.Location;
 import TEAM79b.m4.model.LocationContainer;
 
+/**
+ * screen that shows the list of items for a location
+ */
 public class ItemListScreen extends AppCompatActivity implements Serializable {
 
     private ListView listView;
@@ -73,6 +76,9 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
         goToLocation();
     }
 
+    /**
+     * goes to item entry screen to add new item
+     */
     private void goToNewItem() {
         final Location location = (Location) getIntent().getSerializableExtra("locationObj");
         Button goAddItem = (Button) findViewById(R.id.goAddItem);
@@ -86,6 +92,9 @@ public class ItemListScreen extends AppCompatActivity implements Serializable {
         });
     }
 
+    /**
+     * goes back to screen with all locations
+     */
     private void goToLocation() {
         final Location location = (Location) getIntent().getSerializableExtra("locationObj");
         Button backToLoc = (Button) findViewById(R.id.backToLoc);

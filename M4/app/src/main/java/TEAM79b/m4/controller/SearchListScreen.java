@@ -18,6 +18,9 @@ import TEAM79b.m4.model.Item;
 import TEAM79b.m4.model.Location;
 import TEAM79b.m4.model.LocationContainer;
 
+/**
+ * screen for see a search list of results
+ */
 public class SearchListScreen extends AppCompatActivity {
 
     private ListView listView;
@@ -92,6 +95,10 @@ public class SearchListScreen extends AppCompatActivity {
         });
     }
 
+    /**
+     * goes back to the search screen
+     * @param view
+     */
     public void backToSearch(View view) {
         startActivity(new Intent(SearchListScreen.this, SearchScreen.class));
     }

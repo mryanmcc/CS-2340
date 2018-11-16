@@ -13,6 +13,9 @@ import TEAM79b.m4.R;
 import TEAM79b.m4.model.Item;
 import TEAM79b.m4.model.Location;
 
+/**
+ * contains details for items when they are selected
+ */
 public class ItemDetailScreen extends AppCompatActivity implements Serializable {
 
     private TextView itemTimeStamp;
@@ -46,6 +49,9 @@ public class ItemDetailScreen extends AppCompatActivity implements Serializable 
         goToItemList();
     }
 
+    /**
+     * goes back to the item list screen
+     */
     private void goToItemList() {
         Button backToItemList = (Button) findViewById(R.id.backToItemList);
         backToItemList.setOnClickListener(new View.OnClickListener() {

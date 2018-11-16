@@ -37,6 +37,9 @@ import TEAM79b.m4.model.Location;
 import TEAM79b.m4.model.LocationContainer;
 import TEAM79b.m4.model.Login;
 
+/**
+ * screen for users of any type to login
+ */
 public class LoginScreen extends AppCompatActivity implements Serializable {
 
     private EditText loginEmail;
@@ -60,6 +63,10 @@ public class LoginScreen extends AppCompatActivity implements Serializable {
         goToWelcome();
     }
 
+    /**
+     * login button for users to press once info is typed
+     * @param view screen
+     */
     public void loginPress(View view) {
         firebaseAuth.signInWithEmailAndPassword(loginEmail.getText().toString(), loginPass.getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -160,6 +167,9 @@ public class LoginScreen extends AppCompatActivity implements Serializable {
 //        }
     }
 
+    /**
+     * goes back to welcome screen for a back button on login screen
+     */
     private void goToWelcome() {
         Button loginBack = (Button) findViewById(R.id.loginBack);
         loginBack.setOnClickListener(new View.OnClickListener() {

@@ -39,6 +39,9 @@ import TEAM79b.m4.model.LocationContainer;
 import TEAM79b.m4.model.Login;
 import TEAM79b.m4.model.User;
 
+/**
+ * screen for new users to register
+ */
 public class RegisterScreen extends AppCompatActivity {
 
     private EditText regEmail;
@@ -73,7 +76,9 @@ public class RegisterScreen extends AppCompatActivity {
         goToWelcome();
     }
 
-
+    /**
+     * goes back to the welcome screen with a back button
+     */
     private void goToWelcome() {
         Button regBack = (Button) findViewById(R.id.regBack);
         regBack.setOnClickListener(new View.OnClickListener() {
@@ -84,6 +89,10 @@ public class RegisterScreen extends AppCompatActivity {
         });
     }
 
+    /**
+     * button for users to press when their registration info is entered
+     * @param view screen
+     */
     public void regPress(View view) {
         firebaseAuth.createUserWithEmailAndPassword(regEmail.getText().toString(), regPass.getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {

@@ -18,7 +18,9 @@ import TEAM79b.m4.model.Item;
 import TEAM79b.m4.model.Location;
 import TEAM79b.m4.model.LocationContainer;
 
-
+/**
+ * screen representing list of all locations
+ */
 public class LocationListScreen extends AppCompatActivity {
 
     private ListView listView;
@@ -53,6 +55,9 @@ public class LocationListScreen extends AppCompatActivity {
         goToApp();
     }
 
+    /**
+     * goes back to main app screen
+     */
     private void goToApp() {
         Button backToApp = (Button) findViewById(R.id.backToApp);
         backToApp.setOnClickListener(new View.OnClickListener() {

@@ -12,6 +12,9 @@ import java.io.Serializable;
 
 import TEAM79b.m4.R;
 
+/**
+ * Main App Screen after login
+ */
 public class AppScreen extends AppCompatActivity implements Serializable {
 
 //    private static final String TAG = "MY_APP";
@@ -31,10 +34,18 @@ public class AppScreen extends AppCompatActivity implements Serializable {
 
     }
 
+    /**
+     * Go back to welcome screen
+     * @param view screen
+     */
     public void goToWelcome(View view) {
         startActivity(new Intent(AppScreen.this, WelcomeScreen.class));
     }
 
+    /**
+     * goes to the location list screen, which loads the locations from the model
+     * @param view screen
+     */
     public void loadLocations(View view) {
         //FirebaseUser user = (FirebaseUser) getIntent().getSerializableExtra("user");
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -150,6 +161,10 @@ public class AppScreen extends AppCompatActivity implements Serializable {
         startActivity(new Intent(AppScreen.this, LocationListScreen.class));
     }
 
+    /**
+     * goes to the item search screen
+     * @param view screen
+     */
     public void goToSearch(View view) {
         startActivity(new Intent(AppScreen.this, SearchScreen.class));
     }

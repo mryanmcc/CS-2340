@@ -10,6 +10,9 @@ import android.widget.Button;
 
 import TEAM79b.m4.R;
 
+/**
+ * Pop up screen from entering invalid login info
+ */
 public class BadIdScreen extends Activity {
 
     @Override
