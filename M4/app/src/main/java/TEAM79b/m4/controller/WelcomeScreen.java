@@ -56,7 +56,7 @@ public class WelcomeScreen extends AppCompatActivity {
                     Location keyEntry = new Location(tokens[1], Float.parseFloat(tokens[2]),
                             Float.parseFloat(tokens[3]), tokens[4], tokens[5], tokens[6],
                             Integer.parseInt(tokens[7]), tokens[8], tokens[9], tokens[10]);
-                    ArrayList<Item> valueEntry = new ArrayList<>();
+                    List<Item> valueEntry = new ArrayList<>();
                     locContainer.addLocation(keyEntry, valueEntry);
                 }
                 locationStreamBuffer.close();

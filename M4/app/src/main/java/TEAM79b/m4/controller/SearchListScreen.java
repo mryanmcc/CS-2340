@@ -11,6 +11,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import TEAM79b.m4.R;
@@ -26,7 +27,7 @@ public class SearchListScreen extends AppCompatActivity {
     private ListView listView;
     private ArrayAdapter<String> adapter;
     private LocationContainer locContainer = LocationContainer.getInstance();
-    private HashMap<Location, List<Item>> locationKeys = locContainer.getLocationMap();
+    private Map<Location, List<Item>> locationKeys = locContainer.getLocationMap();
     private List<Item> values = new ArrayList<>();
 
     @Override

@@ -10,6 +10,7 @@ import android.widget.Spinner;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import TEAM79b.m4.R;
@@ -26,7 +27,7 @@ public class SearchScreen extends AppCompatActivity {
     private EditText itemEntry;
     private EditText catEntry;
     private LocationContainer locContainer = LocationContainer.getInstance();
-    private HashMap<Location, List<Item>> locationKeys = locContainer.getLocationMap();
+    private Map<Location, List<Item>> locationKeys = locContainer.getLocationMap();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
