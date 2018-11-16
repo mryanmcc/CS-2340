@@ -7,6 +7,9 @@ import TEAM79b.m4.model.Location;
 
 import static org.junit.Assert.*;
 
+/**
+ * ryan's unit tests
+ */
 public class ItemTest {
 
     //Michael McCorkle M10

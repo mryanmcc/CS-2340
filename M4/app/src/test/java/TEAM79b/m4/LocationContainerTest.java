@@ -10,6 +10,9 @@ import TEAM79b.m4.model.Item;
 import TEAM79b.m4.model.Location;
 import TEAM79b.m4.model.LocationContainer;
 
+/**
+ * robert's unit tests
+ */
 public class LocationContainerTest {
 
     @Test
