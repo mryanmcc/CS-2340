@@ -18,7 +18,6 @@ import TEAM79b.m4.model.LocationContainer;
  * location detail screen
  */
 public class DetailScreen extends AppCompatActivity implements Serializable {
-    private List<String> values;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +27,6 @@ public class DetailScreen extends AppCompatActivity implements Serializable {
 
         Intent intent = getIntent();
         String key = intent.getStringExtra("key");
-
-        LocationContainer locContainer = LocationContainer.getInstance();
 
         Location location = (Location) getIntent().getSerializableExtra("locationObj");
 
